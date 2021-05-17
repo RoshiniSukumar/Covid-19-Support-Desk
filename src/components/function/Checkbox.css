@@ -1,0 +1,90 @@
+/*checkboxes*/
+.container{
+    display:block;
+    position:relative;
+    padding-left:35px;
+    margin-top: 40px;
+    cursor:pointer;
+    font-size:12px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight:bold;
+    
+
+}
+.container input{
+    visibility:hidden;
+    cursor:pointer;
+    position:absolute;
+}
+.mark{
+    position:absolute;
+    top:0;
+    left:0;
+    height:25px;
+    width:25px;
+    background-color: lightgrey;
+}
+.container:hover input ~ .mark{
+        background-color:gray;
+
+    }
+.container input:checked ~ .mark{
+    background-color: blue;
+}
+.mark:after{
+    content:"";
+    position:absolute;
+    display: none;
+}
+.container input:checked ~ .mark:after{
+    display:block;
+}
+.container .mark:after{
+    left:9px;
+    top:5px;
+    width:5px;
+    height:10px;
+    border:solid white;
+    border-width:0 2px 2px 0;
+    -webkit-transform:rotate(45deg);
+    -ms-transform:rotate(45deg);
+    transform:rotate(45deg);
+}
+
+/*search bar*/
+* {
+  box-sizing:border-box;
+}
+form.example input[type=text] {
+ padding: 10px;
+ font-size:10px;
+ border:1px solid grey;
+ width:20%;
+ background: #f1f1f1;
+ margin:10px;
+ max-width:300px;
+ 
+ 
+}
+form.example button{
+    float:left;
+    width:25%;
+    padding:10px;
+    background:#2196F3;
+    color:white;
+    font-size:10px;
+    border:1px solid grey;
+    border-left:none;
+    cursor:pointer;
+    margin:15px;
+
+}
+form.example button:hover{
+    background:#0b7dda;
+}
+form.example::after{
+    content:"";
+    clear:both;
+    display:table;
+}
+ 
