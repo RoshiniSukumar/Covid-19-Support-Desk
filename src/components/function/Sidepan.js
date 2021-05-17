@@ -1,23 +1,13 @@
-import React from 'react';
-import Checkbox from '@material-ui/core/Checkbox';
+import React from 'react'
+import './Sidepan.css'
 
 export default function Sidepan() {
-  const [checked, setChecked] = React.useState(true);
-
-  const handleChange = (event) => {
-    setChecked(event.target.checked);
-  };
-
   return (
-    <div>
-      <Checkbox
-        label="Government"
-        checked={checked}
-        onChange={handleChange}
-        inputProps={{ 'aria-label': 'primary checkbox' }}
-      />
-       
-       
+    <div className="wrap">
+      <div className="floatleft"></div>
+      <div className="floatright"></div>
+      <div><style>{"clear:both"}</style></div>
+      
     </div>
-  );
+  )
 }
