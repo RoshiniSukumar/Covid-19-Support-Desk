@@ -3,10 +3,9 @@ import React from 'react'
 import Header from './components/function/Header'
 import Footer from './components/function/Footer'
 import Navbar from './components/function/Navbar'
-import Checkboxes from './components/function/Checkboxes'
+import Checkbox from './components/function/Checkbox'
 import Sidepan from './components/function/Sidepan'
 
- 
 
 function App() {
   return (
@@ -14,7 +13,7 @@ function App() {
      <Header/>
      <Footer/>
      <Navbar/>
-     <Checkboxes/>
+     <Checkbox/>
      <Sidepan/>
      
     </div>
