@@ -1,0 +1,30 @@
+.wrap{
+    width:100%;
+    position:relative;
+    bottom:400px;
+    height:100%;
+    z-index:-1;
+    margin:0px;
+
+}
+.floatleft{
+    float:left;
+    width:25%;
+    background-color:aliceblue;
+    height:500px;
+    display:overflow;
+    position:relative;
+    z-index:-1;
+    margin:0px;
+    
+}
+.floatright{
+    float:right;
+    background-color:seashell;
+    width:75%;
+    height:500px;
+    display:overflow;
+    position:relative;
+    z-index:-1;
+    margin:0;
+}
