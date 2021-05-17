@@ -61,6 +61,7 @@ animation:scroll-left 30s linear infinite;
     text-decoration:wavy;
     white-space:nowrap;
     display:flexbox;
+    width:100%;
 
 }
 .scroll-left p{
