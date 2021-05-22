@@ -4,7 +4,11 @@ import './Footer.css'
 export default function Footer() {
   return (
     <div className="scroll-left">
-      <p className="foot">There is nothing that gives more assurance than a mask. Wear Mask! Stop the Spread ! Stay Home .Stay Safe!!! You can still make something beautiful and something powerful out of a really bad situtation.</p>
+      <p className="foot">For Covid Drugs and Oxygen bed availability – Please Dial 104   
+      /For Ambulance Service – Please Dial 108    
+      /Any other issues contact 24 hours control room numbers given in the whom to contact section.
+      
+</p>
     </div>
   )
 }
