@@ -5,6 +5,7 @@ export default function Checkbox() {
   return (
     
       <div>
+      <h5 className="text">Coimbatore COVID Beds Availability Status</h5>
       <label className="container">Government
       <input type="checkbox" checked="check"></input>
       <span className="mark"></span></label>
@@ -20,10 +21,10 @@ export default function Checkbox() {
       <label className="container">COVID Care Centres(CCC - For Mild Cases)
       <input type="checkbox" checked="check"></input>
       <span className="mark"></span></label>
-      <form className="example" action="#action">
-      <input type="text" placeholder="Search by Hospital/Care Centre Name" name="search2"></input>
-      <button type="submit"><i className="fafa-search"></i></button>
-      </form>
+      
+      
+      
     </div>
   )
 }
+ 
