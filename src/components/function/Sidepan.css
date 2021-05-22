@@ -11,7 +11,7 @@
     float:left;
     width:30%;
     background-color:aliceblue;
-    height:500px;
+    height:auto;
     display:overflow;
     position:relative;
     z-index:-1;
@@ -22,7 +22,7 @@
     float:right;
     background-color:seashell;
     width:70%;
-    height:500px;
+    height:auto;
     display:overflow;
     position:relative;
     z-index:-1;
