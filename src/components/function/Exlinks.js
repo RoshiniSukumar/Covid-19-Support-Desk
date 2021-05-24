@@ -15,7 +15,7 @@ export default function Exlinks() {
 <div className="linkfour"><a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports">4.Situation Dashboard</a></div>
 <div> 
 <ul className="sci">
-       <li><a href=""><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+       <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
        <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
        <li><a href="#"><i class="fab fa-github" aria-hidden="true"></i></a></li>
        <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
