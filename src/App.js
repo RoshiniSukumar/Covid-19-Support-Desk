@@ -8,9 +8,11 @@ import Searchbar from './components/function/Searchbar'
 import Sidepan from './components/function/Sidepan'
 import Contact from './components/function/Contact'
 import Home from './components/function/Home'
-import About from './components/function/About'
+import Exlinks from './components/function/Exlinks'
 import Login from './components/function/Login'
 import Update from './components/function/Update'
+import About from './components/function/About'
+import Cards from './components/function/Cards'
 import {BrowserRouter,Route,Switch} from "react-router-dom"
 
 
@@ -26,12 +28,15 @@ function App() {
           <Searchbar/>
           <Sidepan/>
           <Home/>
+          <Cards/>
       </Route>
       <Route exact path="/contact">
         <Contact/>
       </Route>
       <Route exact path="/about">
         <About/>
+        <Exlinks/>
+       
       </Route>
       <Route exact path="/login">
         <Login/>
