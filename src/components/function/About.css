@@ -1,125 +1,41 @@
-.entire{
-    background-color: seashell;
-}
-.text{
+.text1{
     padding:20px;
-}
-.title{
-    color:grey;
-    margin-top: 20px;
-}
-.external{
-    font-size: 25px;
-    font-weight: bold;
-    color:deeppink;
-    font-family: 'Courier New', Courier, monospace;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-.links{
-    margin-bottom: 10px;
-    font-family: 'Times New Roman', Times, serif;
-    color:blueviolet;
-}
-.linkfour{
-    margin-bottom: 40px;
-    font-family: 'Times New Roman', Times, serif;
-    color:blueviolet;
-}
-
-/*social media bar*/
-.fa{
-    padding: 20px;
-    width:30px;
-    height:30px;
-    margin: 10px;
-    margin-bottom:50px;
     
 }
-.fa:hover{
-    opacity:0.7;
-}
-.fa-facebook{
-    background:#3B5998;
-    color:white;
+.flip-card{
+     background-color: transparent;
+     width:95%;
+     height:70%;
+     perspective: 1000px;
+     margin:30px;
 
 }
-.fa-twitter{
-    background:#dd4b39;
-    color:white;
+.flip-card-inner{
+    position:relative;
+    width:95%;
+    height:70%;
+    text-align:justify;
+    transition:transform 0.8s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
-.fa-instagram{
-    background:#125688;
-    color:white;
+.flip-card:hover  .flip-card-inner{
+    transform: rotateY(180deg);
 }
-.fa-github{
-    background:grey;
-    color:white;
+.flip-card-front,.flip-card-back{
+    position:absolute;
+    width:95%;
+    height:70%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
-.fa-whatsapp{
-    background: green;
-    color:white;
+.flip-card-front{
+    background-color:#bbb;
+    color:black;
 }
-/*
- body{
-     margin:0;
-     padding:0;
-     background:black;
-     font-family:'Quickstand',sans-serif;
+.flip-card-back{
+    background-color: #2980b9;
+    color:white;
+    transform:rotateY(180deg);
 
- }
- .container{
-     max-width:1000px;
-     margin:100px auto;
-     display:flex;
-     flex-wrap:wrap;
-     justify-content: space-around;
- }
- .card{
-     position:relative;
-     margin:20px 0;
-     width:300px;
-     height:400px;
-     background:#fff;
-     transform-style:preserve-3d;
-     transform:perspective(2000px);
-     transition:1s;
-     box-shadow:inset 300px 0 50px rgba(0,0,0,.5);
-
- }
- .card:hover{
-     z-index:1000px;
-     transform:perspective(2000px) rotate(-10deg);
-     box-shadow: inset 20px 0 50px rgba(0,0,0,.5);
- }
- .card .imgbox{
-     position:relative;
-     width:100%;
-     height:100%;
-     border:1px solid #000;
-     box-sizing:border-box;
-     transform-origin:left;
-     z-index:1;
-     transition:1s;
-
- }
- .card:hover .imgbox{
-     transform:rotateY(-135deg);
-
- }
- .card .imgbox .img{
-     position:absolute;
-     top:0;
-     left:0;
-     width:100%;
-     height:100%;
-     object-fit: cover;
- }
- .card .details{
-     position: absolute;
-     top:0;
-     left:0;
-     box-sizing:border-box;
-     padding:20px;
- }
-*/
+}
