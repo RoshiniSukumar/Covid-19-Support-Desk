@@ -128,13 +128,13 @@ img{
 }
 .fling-minislide img{
     position: absolute;
-    object-fit: contain;
+    object-fit:fill;
     left:25%;
-    bottom:300px;
+    bottom:270px;
     animation:fling-minislide 35s infinite;
     opacity:0;
-    max-width:60%;
-    max-height:400px;
+    max-width:75%;
+    max-height:500px;
     margin:0;
     
 }
