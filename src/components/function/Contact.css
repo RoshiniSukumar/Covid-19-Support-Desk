@@ -1,3 +1,7 @@
+.contact-image{
+    width:95%;
+    margin:40px;
+}
 table,td,th{
     border:1px solid grey ;
     font-size: 12px;
