@@ -4,6 +4,7 @@ import './Contact.css'
 export default function Contact() {
   return (
     <div>
+      <img className="contact-image" src="./images/Whom-to-contact-English.jpeg" alt="whom to contact"></img>
       <h4 className="heading">District Emergency Operations Center Contact Numbers</h4>
       <table>
           <tr>
