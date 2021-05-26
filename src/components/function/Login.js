@@ -1,29 +1,107 @@
-import React from 'react'
-import './Login.css'
+import React from "react";
+import { Formik, useFormik } from "formik";
+import './Login.css';
 
-export default function Login() {
+
+const initialValues = {
+  email: "",      
+  pass: "",
+  newobject: "",
+};
+
+const validate = (values) => {
+  let error = {};
+ 
+  if (!values.email) {
+    error.email = "* Required Field";
+  }
+  if (!values.pass) {
+    error.pass = "* Required Field";
+  }
+  return error;
+};
+
+function Login(props) {
+  
+  const onSubmit = async (values) => {
+    values.add = {
+      email: values.email,
+      pass: values.pass,
+    };
+
+    console.log(values.add)
+  };
+  const formik = useFormik({
+    initialValues,
+    onSubmit,
+    validate,
+  });
+  
+
   return (
-    <div className="box">
-        <h2>Login</h2>
-        <form method="post">
-            <div className="txt_field">
-                <input type="text" required="required"></input>
-                <span>Username</span>
-            </div>
-            <div className="txt_field">
-                <input type="password" required></input>
-                <span>Password</span>
-            </div>
-            <div className="pass">Forgot Password ?</div>
-            <input type="submit" value="Login"></input>
-            <div className="sign_up">
-                Not a member? <a href="./Update.js">Signup</a>
-            </div>
-            
-        </form>
+    <form  onSubmit={formik.handleSubmit}>
+      <body >
+        <div className="outer">
+        <div className='login-form'>
+          <h2 className="top">Login</h2>
+      <div className='content'>
       
-    </div>
-  )
+      <div >
+        <div>
+          
+          <label className='dest' forhtml="email" >Email:
+          </label>{" "}
+        </div>{" "}
+        <input
+          type="email"
+          name="email"
+          placeholder="Your Email"
+          className="box-log"
+          onChange={formik.handleChange}
+          value={formik.values.email}
+          onBlur={formik.handleBlur}
+        />{" "}
+        {formik.touched.email && formik.errors.email ? (
+          <div  className='required'> {formik.errors.email} </div>
+        ) : null}{" "}
+        
+              </div>{" "}
+      <br></br>
+
+      <div >
+        <div>
+          <label className='dest' forhtml="pass" >
+            Password:
+          </label>{" "}
+        </div>{" "}
+        <input
+          type="password"
+          name="pass"
+          placeholder="Your Password"
+          className="box-log"
+          onChange={formik.handleChange}
+          value={formik.values.pass}
+          onBlur={formik.handleBlur}
+        />{" "}
+        {formik.touched.pass && formik.errors.pass ? (
+          <div  className='required'> {formik.errors.pass} </div>
+        ) : null}{" "}
+        
+      </div>{" "}
+      <br></br>
+
+      
+      <button  type="submit" className='login-submit'>
+        {" "}
+        Login{" "}
+      </button>{" "}
+      </div>
+      </div>
+      </div>
+    </body>
+    </form>
+    
+  );
 }
 
-
+export default Login;
