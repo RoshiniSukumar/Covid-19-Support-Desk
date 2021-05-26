@@ -10,7 +10,7 @@ import Contact from './components/function/Contact'
 import Home from './components/function/Home'
 import Exlinks from './components/function/Exlinks'
 import Login from './components/function/Login'
-import Update from './components/function/Update'
+ 
 import About from './components/function/About'
 import Cards from './components/function/Cards'
 import {BrowserRouter,Route,Switch} from "react-router-dom"
@@ -40,7 +40,7 @@ function App() {
       </Route>
       <Route exact path="/login">
         <Login/>
-        <Update/>
+        
       </Route>
       </Switch>
       <Footer/>
