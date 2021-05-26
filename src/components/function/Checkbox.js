@@ -4,7 +4,7 @@ import './Checkbox.css'
 export default function Checkbox() {
   return (
     
-      <div>
+      <div className="bg">
       <h5 className="text">Coimbatore COVID Beds Availability Status</h5>
       <label className="container">Government
       <input type="checkbox" checked="check"></input>
