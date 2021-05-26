@@ -1,3 +1,9 @@
+
+.bg{
+    background: radial-gradient(lightpink,white);
+    
+}
+
 .text{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     color:darkslategray;
