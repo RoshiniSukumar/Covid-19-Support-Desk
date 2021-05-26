@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
  
 export default function Exlinks() {
   return (
-     
+  
 <div className="links"> 
   <h3 className="external">Covid-19 External Links</h3>
   <div className="contains">
@@ -52,7 +52,7 @@ export default function Exlinks() {
  
    </div>
      
-    
+   
      
     
   );
