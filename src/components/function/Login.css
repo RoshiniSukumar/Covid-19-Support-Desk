@@ -94,7 +94,8 @@ input[type="submit"]:hover{
     text-decoration: underline;
 }
 */
-.outer{
+/*login*/
+/*.outer{
     background: radial-gradient(lightpink,white);
 }
 .login-form{
@@ -152,14 +153,14 @@ form .dest{
     transition:0.5s;
     color:#666; 
     text-decoration: none;
-}
+}*/
 /*.dest input:focus ~ label,.dest input:valid ~ span{
     color:#2691d9;
     font-size: 15px;
     transform:translateY(-20px);
     margin:1px;
 }*/
-.login-submit{
+/*.login-submit{
     border:1px solid;
     background: #2691d9;
     border-radius:25px;
@@ -176,4 +177,88 @@ button[type="submit"]:hover{
 .required{
     color:red;
     font-family: Georgia, 'Times New Roman', Times, serif;
+}*/
+/* login github*/
+.App {
+    display: flex;
+    justify-content: center;
+  }
+  
+  label {
+    font-weight: bold;
+    display: flex;
+    margin-bottom: 5px;
+    position: relative;
+    left:50px;
+  }
+  
+  input + label {
+    font-weight: bold;
+    display: inline-flex;
+    margin-right: 20px;
+    
+    
+  }
+  
+  input[type='text'],
+  input[type='email'],
+  input[type='password'],
+  textarea,
+  select {
+    display: block;
+    width: 300px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    /* margin-bottom: 20px; */
+    position: relative;
+    left:50px; 
+  }
+  
+  .form-control {
+    margin-bottom: 20px;
+  }
+  
+  .error {
+    color: red;
+  }
+  .login{
+    border:1px solid;
+    background: #2691d9;
+    border-radius:25px;
+    font-size: 18px;
+    cursor:pointer;
+    color:#e9f4fb;
+    width:40%;
+    height:40px;
+    position:relative;
+    left:120px;
+
+  }
+.loginform{
+    background: border-box;
+    position:relative;
+    left:550px;
+    top:150px;
+    
+    transform:translate(-50%,-50%);
+    width:400px;
+    background:#ccc;
+    border-radius:10px;  
+    margin-top:130px;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+    padding-top: 20px;
+    
+}
+.loginhead{
+    font-family: 'Times New Roman', Times, serif;
+    position: relative;
+    left:55px;
+    margin:30px;
 }
