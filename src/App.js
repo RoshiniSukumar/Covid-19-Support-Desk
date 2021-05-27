@@ -10,8 +10,9 @@ import Contact from './components/function/Contact'
 import Home from './components/function/Home'
 import Exlinks from './components/function/Exlinks'
 import Login from './components/function/Login'
- 
+import LoginNavbar from './components/function/LoginNavbar'
 import About from './components/function/About'
+import Update from './components/function/Update'
 import Cards from './components/function/Cards'
 import {BrowserRouter,Route,Switch} from "react-router-dom"
 
@@ -39,9 +40,11 @@ function App() {
        
       </Route>
       <Route exact path="/login">
-        <Login/>
-        
-      </Route>
+        <LoginNavbar/></Route>
+        <Switch>
+        <Route exact path="/loginform"><Login/></Route>
+        <Route exact path="/registerform"><Update/></Route>
+        </Switch>
       </Switch>
       <Footer/>
     </BrowserRouter>
