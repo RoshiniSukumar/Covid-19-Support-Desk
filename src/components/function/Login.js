@@ -1,107 +1,48 @@
-import React from "react";
-import { Formik, useFormik } from "formik";
-import './Login.css';
-
-
-const initialValues = {
-  email: "",      
-  pass: "",
-  newobject: "",
-};
-
-const validate = (values) => {
-  let error = {};
+import React from 'react'
+import { Formik, Form } from 'formik'
+import * as Yup from 'yup'
+import FormikControl from './FormikControl'
+import './Login.css'
  
-  if (!values.email) {
-    error.email = "* Required Field";
-  }
-  if (!values.pass) {
-    error.pass = "* Required Field";
-  }
-  return error;
-};
-
-function Login(props) {
-  
-  const onSubmit = async (values) => {
-    values.add = {
-      email: values.email,
-      pass: values.pass,
-    };
-
-    console.log(values.add)
-  };
-  const formik = useFormik({
-    initialValues,
-    onSubmit,
-    validate,
-  });
-  
-
-  return (
-    <form  onSubmit={formik.handleSubmit}>
-      <body >
-        <div className="outer">
-        <div className='login-form'>
-          <h2 className="top">Login</h2>
-      <div className='content'>
-      
-      <div >
-        <div>
-          
-          <label className='dest' forhtml="email" >Email:
-          </label>{" "}
-        </div>{" "}
-        <input
-          type="email"
-          name="email"
-          placeholder="Your Email"
-          className="box-log"
-          onChange={formik.handleChange}
-          value={formik.values.email}
-          onBlur={formik.handleBlur}
-        />{" "}
-        {formik.touched.email && formik.errors.email ? (
-          <div  className='required'> {formik.errors.email} </div>
-        ) : null}{" "}
-        
-              </div>{" "}
-      <br></br>
-
-      <div >
-        <div>
-          <label className='dest' forhtml="pass" >
-            Password:
-          </label>{" "}
-        </div>{" "}
-        <input
-          type="password"
-          name="pass"
-          placeholder="Your Password"
-          className="box-log"
-          onChange={formik.handleChange}
-          value={formik.values.pass}
-          onBlur={formik.handleBlur}
-        />{" "}
-        {formik.touched.pass && formik.errors.pass ? (
-          <div  className='required'> {formik.errors.pass} </div>
-        ) : null}{" "}
-        
-      </div>{" "}
-      <br></br>
-
-      
-      <button  type="submit" className='login-submit'>
-        {" "}
-        Login{" "}
-      </button>{" "}
-      </div>
-      </div>
-      </div>
-    </body>
-    </form>
-    
-  );
-}
-
-export default Login;
+ function Login() {
+   const initialValues={
+     email:'',
+     password:''
+   }
+   
+   const ValidationSchema = Yup.object({
+     email:Yup.string().email('Invalid email format').required('Required'),
+     password:Yup.string().required('Required')
+   })
+   
+   const onSubmit = values => {
+     console.log('Form data',values)
+   }
+   return (
+     
+       <Formik initialValues={initialValues} ValidationSchema={ValidationSchema} onSubmit={onSubmit}>
+         {
+           formik => {
+             return <Form className="loginform">
+               <h2 className="loginhead">Login to Update Beds</h2>
+               <FormikControl
+               control='input'
+               type='email'
+               label='Email'
+               name='email'/>
+               <FormikControl
+               control='input'
+               type='password'
+               label='Password'
+               name='password'/>
+               <button className="login" type='submit' disabled={!formik.isValid}>Login</button>
+             </Form>
+           }
+         }
+       </Formik>
+     
+   )
+ }
+ 
+ export default Login
+ 
