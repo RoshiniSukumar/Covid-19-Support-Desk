@@ -189,7 +189,7 @@ button[type="submit"]:hover{
     display: flex;
     margin-bottom: 5px;
     position: relative;
-    left:50px;
+    left:60px;
   }
   
   input + label {
@@ -243,11 +243,11 @@ button[type="submit"]:hover{
 .loginform{
     background: border-box;
     position:relative;
-    left:550px;
+    left:600px;
     top:150px;
     
     transform:translate(-50%,-50%);
-    width:400px;
+    width:450px;
     background:#ccc;
     border-radius:10px;  
     margin-top:130px;
