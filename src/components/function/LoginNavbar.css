@@ -93,3 +93,15 @@ ol li:hover::before{
 ol li:hover{
     background: rgb(255,63,63);
 }
+.gifs{
+    max-height: 30%;
+    max-width:30%px;
+    position: relative;
+    bottom:580px;
+    left:350px;
+    object-fit: contain;
+    margin:70px;
+    margin-left: 50px;
+    padding:50px;
+    opacity:.7;
+}
