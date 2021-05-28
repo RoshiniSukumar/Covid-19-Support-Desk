@@ -4,7 +4,7 @@ import './LoginNavbar.css'
 export default function LoginNavbar() {
   return (
        
-     
+    <div>
       <div class="nav">
          
             <ol>
@@ -14,6 +14,11 @@ export default function LoginNavbar() {
             </ol>
         
         </div>
+        <div className="gifs">
+         <img src='./images/tenor.gif' alt="tenor" width="300" height="300"></img>
+        </div>
+        </div> 
+        
   )
 }
-
+/*<img src='./images/world.gif' alt="tenor" width="300" height="300"></img>*/
