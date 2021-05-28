@@ -1,5 +1,6 @@
 import React from 'react'
 import Input from './Input'
+import RadioButtons from './RadioButtons'
  
 
 function FormikControl (props) {
@@ -7,6 +8,8 @@ function FormikControl (props) {
   switch (control) {
     case 'input':
       return <Input {...rest} />
+    case 'radio':
+      return <RadioButtons {...rest} />
      
     default:
       return null
