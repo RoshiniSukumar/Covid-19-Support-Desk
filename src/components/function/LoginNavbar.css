@@ -65,7 +65,7 @@ ol{
     font-size: 1.2rem;
 }
 ol li{
-    margin:0 20px;
+    margin:0 5px;
     padding:10px 20px;
     position:relative;
     top:-230px;
@@ -75,6 +75,7 @@ ol li{
 ol li a{
     color:blue;
     text-decoration:none;
+    
 }
 ol li ::before{
     content:"";
@@ -93,15 +94,59 @@ ol li:hover::before{
 ol li:hover{
     background: rgb(255,63,63);
 }
-.gifs{
-    max-height: 30%;
-    max-width:30%px;
+
+
+
+/*.fling-minislide{
+    width: 70%;
+    margin: 0px;
+    max-height: 80%;
+    object-fit:contain;
+    padding-bottom:52%;
+    overflow: hidden;
     position: relative;
-    bottom:580px;
-    left:350px;
-    object-fit: contain;
-    margin:70px;
-    margin-left: 50px;
-    padding:50px;
-    opacity:.7;
+    left:8%;
+    top:-500px;
+   
+}
+.fling-minislide img{
+    position: absolute;
+    object-fit:fill;
+    left:25%;
+    bottom:270px;
+    animation:fling-minislide 35s infinite;
+    opacity:0;
+    max-width:75%;
+    max-height:500px;
+    margin:0;
+    
+}
+@keyframes fling-minislide{
+    25%{opacity:1;}
+    40%{opacity:0;}
+}
+.fling-minislide img:nth-child(3){animation-delay:0s;}
+.fling-minislide img:nth-child(2){animation-delay:10s;}
+.fling-minislide img:nth-child(1){animation-delay:20s;}
+
+*/
+
+.video{
+    position:relative;
+    bottom: 470px;
+    left:100px;
+    margin-bottom: 50px;
+}
+
+
+/*other links*/
+.full{
+    position:relative
+}
+other1{
+    background-color: brown;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-decoration: none;
 }
