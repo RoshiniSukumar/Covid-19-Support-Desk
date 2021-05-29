@@ -3,11 +3,14 @@ import './Home.css'
  
 export default function Home() {
   return (
-    <div className="fling-minislide">
-      <img src='./images/image1.jpg' alt="image1" width="1000" height="auto"></img>
-      <img src='./images/image2.jpg' alt="image2" width= "500" height="auto"></img>
-      <img src='./images/image3.jpg' alt="image3" width="700" height="auto"></img>
-    </div>    
+         <div>
+        <div className="gifs">
+         <img src='./images/tenor.gif' alt="tenor" width="400" height="400"></img>
+        </div>
+        <div className="gif1">
+        <img src='./images/covid.gif' alt="covid" width="300" height="300"></img>
+        </div>
+        </div>
   )
 }
  /*<div>
