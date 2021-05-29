@@ -183,6 +183,7 @@
 
 .contains{
     position: relative;
+    left:50px;
     width:550px;
     padding:0px;
     display:flex;
@@ -255,4 +256,6 @@
     text-decoration: none;
       
 }
+ 
+
  
