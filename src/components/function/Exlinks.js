@@ -1,6 +1,7 @@
 import React from 'react'
 import './Exlinks.css'
-import { Link } from "react-router-dom"
+
+<script defer src="https://kit.fontawesome.com/0c9450273d.js" crossorigin="anonymous"></script>
  
 export default function Exlinks() {
   return (
@@ -48,7 +49,6 @@ export default function Exlinks() {
 </div>
 </div>
 </div>
-
  
    </div>
      
@@ -58,3 +58,12 @@ export default function Exlinks() {
   );
 }
 
+/*import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import{
+  faFacebook,
+  faTwitter,
+  faGoogle,
+  faLinkedIn,
+  faInstagram
+
+}from "@fortawesome/fontawesome-free";*/
