@@ -248,7 +248,7 @@ button[type="submit"]:hover{
     
     transform:translate(-50%,-50%);
     width:450px;
-    background:#ccc;
+    background:whitesmoke;
     border-radius:10px;  
     margin-top:130px;
     margin-bottom: 50px;
