@@ -1,0 +1,51 @@
+/* SOCIAL STUFF */
+.social-container {
+    background:whitesmoke;
+    padding:20px 0px 50px 0px;
+    position: relative;
+    top:400px;
+    bottom:400px;
+    margin-top: 20px;
+    margin-bottom:50px;
+    
+  }
+  a.social {
+    margin: 5px;
+    padding-left:5px;
+    transition: transform 250ms;
+    display: inline-block;
+  }
+  
+  a.social:hover {
+    transform: translateY(-5px);
+  }
+  
+  a.google {
+    color: #eb3223;
+    position: relative;
+    left:25px;
+  }
+  
+  a.facebook {
+    color: #4968ad;
+    position: relative;
+    right:30px;
+  }
+  
+  a.twitter {
+    color: #49a1eb;
+    position: relative;
+    right:120px;
+  }
+  
+  a.instagram {
+    color: black;
+    position: relative;
+    right:180px;
+  }
+  a.whatsapp {
+    color:green;
+    position: relative;
+    right:320px;
+  }
+  
