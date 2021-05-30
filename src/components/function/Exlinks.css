@@ -12,12 +12,12 @@
     font-weight: bolder;
     color:red;
     white-space: nowrap;
-    font-family: 'Courier New', Courier, monospace;
+    font-family:'Times New Roman', Times, serif;
     margin-top: 520px;
     margin-bottom: 10px;
     text-align: center;
     position:relative;
-    left:400px;
+    left:550px;
 
 }
 
@@ -167,6 +167,10 @@
 
 
 /*card*/
+.external{
+    position: relative;
+    right:80px;
+}
 .links{
     display:flex;
     justify-content: center;
@@ -200,7 +204,7 @@
     width:200px;
     height:300px;
     background: #fff;
-    margin:10px;
+    margin:30px;
     border-radius:20px;
     overflow:auto;
     box-shadow:0 15px 25px rgba(0,0,0,0.2);
@@ -231,15 +235,14 @@
     color:#666;
     font-size: 500px;
     margin:0px;
-   
-
+    
 }
 .contains .card .circle h2{
     color:#fff;
     font-size:4.5em;
     padding:30px 0;
     text-align: center;
-
+    
 }
 .contains .card .contents{
     position: absolute;
