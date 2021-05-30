@@ -1,7 +1,6 @@
 import React from 'react'
 import './Exlinks.css'
 
-<script defer src="https://kit.fontawesome.com/0c9450273d.js" crossorigin="anonymous"></script>
  
 export default function Exlinks() {
   return (
