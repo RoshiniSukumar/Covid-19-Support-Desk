@@ -3,13 +3,51 @@ import './Cards.css'
 
 export default function Cards() {
   return (
-    
-      <div className="boxs">
-          <div className="figure">
+    <div className="main center">
+    <div className="box center">
+    <h2>CHO - ARUN HOSPITAL</h2> 
+
+              <div> <p>NEW SCHEME ROAD, Pollachi
+                    Coimbatore.
+                    Ph:9776553657
+                  </p></div> <br></br>                   
+                   
+
+                  <table>
+                    <tr>
+                  <th>Bed type</th>
+                  <th>Vacant/Total</th>
+                  </tr>
+                  <tr>
+                    <td>Normal</td>
+                    <td>10/46</td>
+                    </tr>
+                    <tr><td>Oxygen</td>
+                    <td>0/32</td>
+                    </tr>
+                    <tr><td>ICU</td>
+                    <td>0/2</td>
+                      </tr> 
+                      <tr>
+                        <td>Total</td>
+                        <td>10/70</td>
+                      </tr>
+
+
+
+                  </table>
+    </div>
+    </div>
+  )
+}
+
+/*
+<div className="main center">
+          <div className="bx">
           <h2>CHO - ARUN HOSPITAL</h2>
-              <div className="caption">
+              <div className="content center">
               
-              <div className="about">
+                  <p>Ph:9776553657</p>
                   
                   <p>NEW SCHEME ROAD, Pollachi
                     Coimbatore
@@ -42,6 +80,47 @@ export default function Cards() {
 
           </div>
       </div>
+      */
+
+
+      /*
+      <div className="fully">
+    <div class="box1">
+        <div class="imgBx">
+        <h2>CHO - ARUN HOSPITAL</h2>   
+        </div>
+        <div class="content1">
+        <p>Ph:9776553657</p><br></br>
+                  
+                  <p>NEW SCHEME ROAD, Pollachi
+                    Coimbatore
+                  </p><br></br>
+                   
+                  <table>
+                    <tr>
+                  <th>Bed type</th>
+                  <th>Vacant/Total</th>
+                  </tr>
+                  <tr>
+                    <td>Normal</td>
+                    <td>10/46</td>
+                    </tr>
+                    <tr><td>Oxygen</td>
+                    <td>0/32</td>
+                    </tr>
+                    <tr><td>ICU</td>
+                    <td>0/2</td>
+                      </tr> 
+                      <tr>
+                        <td>Total</td>
+                        <td>10/70</td>
+                      </tr>
+
+
+
+                  </table> 
+        </div>
     </div>
-  )
-}
+      
+    </div>
+    */
