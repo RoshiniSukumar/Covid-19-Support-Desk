@@ -16,7 +16,7 @@ import Update from './components/function/Update'
 import Cards from './components/function/Cards'
 import Socialmediabar from './components/function/Socialmediabar'
 import {BrowserRouter,Route,Switch} from "react-router-dom"
-import { library} from '@fortawesome/react-fontawesome'
+ 
 
 
 function App() {
@@ -38,7 +38,7 @@ function App() {
       <Route exact path="/about">
         <About/>
         <Exlinks/>
-        <Socialmediabar/>
+        
       </Route>
       <Route exact path="/login">
         <LoginNavbar/></Route>
@@ -47,6 +47,7 @@ function App() {
         <Route exact path="/registerform"><Update/></Route>
         </Switch>
       </Switch>
+      <Socialmediabar/>
       <Footer/>
     </BrowserRouter>
      
