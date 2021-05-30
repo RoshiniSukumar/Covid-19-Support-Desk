@@ -8,8 +8,8 @@ export default function LoginNavbar() {
       <div class="nav">
          
             <ol>
-                <li><a href="/loginform">Login</a></li>
-                <li><a href="/registerform">Register</a></li>
+                <li className="item"><a href="/loginform">Login</a></li>
+                <li className="item"><a href="/registerform">Register</a></li>
                  
             </ol>
             </div>
@@ -19,7 +19,7 @@ export default function LoginNavbar() {
               </div>
                <div className="full">
               <div className="sidelinks"> 
-       <div className="other1"><a href=" https://ereceipt.tn.gov.in/Cmprf/Cmprf">CM Welfare Fund</a></div>
+       <div className="other1"><a href=" https://ereceipt.tn.gov.in/Cmprf/Cmprf"  >CM Welfare Fund</a></div>
          </div>
 
          <div className="sidelinks"> 
