@@ -15,6 +15,7 @@ import About from './components/function/About'
 import Update from './components/function/Update'
 import Cards from './components/function/Cards'
 import Socialmediabar from './components/function/Socialmediabar'
+ 
 import {BrowserRouter,Route,Switch} from "react-router-dom"
  
 
@@ -26,25 +27,33 @@ function App() {
       <Navbar/>
       <Switch>
         <Route exact path="/">
-          <Checkbox/>
+          <Checkbox />
           <Searchbar/>
           <Sidepan/>
           <Home/>
           <Cards/>
+           
       </Route>
+
       <Route exact path="/contact">
         <Contact/>
       </Route>
+
       <Route exact path="/about">
         <About/>
         <Exlinks/>
         
       </Route>
+
       <Route exact path="/login">
-        <LoginNavbar/></Route>
+         
+        <LoginNavbar/>
+         
+        </Route>
         <Switch>
         <Route exact path="/loginform"><Login/></Route>
         <Route exact path="/registerform"><Update/></Route>
+
         </Switch>
       </Switch>
       <Socialmediabar/>
