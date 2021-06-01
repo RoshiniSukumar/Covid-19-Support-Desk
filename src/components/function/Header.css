@@ -1,6 +1,6 @@
 #head{
     text-align: center;
-    color:lightcoral;
+    color:coral;
     border-color:honeydew;
     border-style:outset;
     border-width:3px;
@@ -8,5 +8,16 @@
     font-style:italic;
     font-variant:inherit;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
+    animation-name:ex;
+    animation-duration:.10s;
+    animation-iteration-count:infinite;
     
+}
+@keyframes ex{
+    0% {color:coral;}
+    20% {color:red;}
+    /*40% {color:black;}
+    60% {color:indigo;}
+    80% {color:darkgreen;}*/
+    100% {color:darkblue;}
 }
