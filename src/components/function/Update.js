@@ -110,10 +110,10 @@ const stepTwoValidationSchema = Yup.object({
   hospitalname: Yup.string().required('*Required').label("Name of Hospital/Centre"),
   address: Yup.string().required('*Required').label("Address"),
   contactnumber:Yup.number().required('*Required').label("Contact Number"),
-  normalbed: Yup.number().required('*Required').label("Normal Beds"),
-  icubed:Yup.number().required('*Required').label("ICU Beds"),
-  o2bed: Yup.number().required('*Required').label("Oxygen Beds"),
-  total: Yup.number().required('*Required').label("Total"),
+  normalbed: Yup.string().required('*Required').label("Normal Beds"),
+  icubed:Yup.string().required('*Required').label("ICU Beds"),
+  o2bed: Yup.string().required('*Required').label("Oxygen Beds"),
+  total: Yup.string().required('*Required').label("Total"),
     
 
 });
@@ -147,6 +147,11 @@ const StepTwo = (props) => {
           <Field name="address" />
           <div className="required">
           <ErrorMessage name="address" /></div>
+
+          <p className="lbl" >Contact number</p>
+          <Field name="contactnumber" />
+          <div className="required">
+          <ErrorMessage name="contactnumber" /></div>
 
           <p className="lbl">Normal Beds</p>
           <Field name="normalbed" />
