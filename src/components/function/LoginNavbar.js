@@ -5,8 +5,8 @@ export default function LoginNavbar() {
   return (
        
     <div>
-      <div class="nav">
-         
+      <div class="nav"> 
+             
             <ol>
                 <li className="item"><a href="/loginform">Login</a></li>
                 <li className="item"><a href="/registerform">Register</a></li>
@@ -15,7 +15,7 @@ export default function LoginNavbar() {
             </div>
             <div className="video">
 
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/cQBo6Bbk0_A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/CmaA00M4kNI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ></iframe>
               </div>
                <div className="full">
               <div className="sidelinks"> 
