@@ -5,15 +5,16 @@ export default function Cards() {
   return (
     <div className="main center">
     <div className="box center">
-    <h2>CHO - ARUN HOSPITAL</h2> 
+    <h2 className="hname">CHO - ARUN HOSPITAL</h2> 
 
-              <div> <p>NEW SCHEME ROAD, Pollachi
+              <div className="address"> <p>NEW SCHEME ROAD, Pollachi
                     Coimbatore.
+                    <br/>
                     Ph:9776553657
                   </p></div> <br></br>                   
                    
 
-                  <table>
+                  <table classname="beds">
                     <tr>
                   <th>Bed type</th>
                   <th>Vacant/Total</th>
