@@ -12,15 +12,40 @@ import Exlinks from './components/function/Exlinks'
 import Login from './components/function/Login'
 import LoginNavbar from './components/function/LoginNavbar'
 import About from './components/function/About'
-import Update from './components/function/Update'
+import Register from './components/function/Register'
 import Cards from './components/function/Cards'
 import Socialmediabar from './components/function/Socialmediabar'
  
 import {BrowserRouter,Route,Switch} from "react-router-dom"
+import BedDetails from './components/function/BedDetails'
  
 
 
 function App() {
+  const details =[
+    {
+      hospitaltype:"Cho",
+      hospitalname:"Arun hospital",
+      address:"x street cbe",
+      contactnumber:"676867547954",
+      normalbed:"10/12",
+      icubed:"10/12",
+      o2bed:"10/12",
+      total:"30/36"
+  },
+  {
+    hospitaltype:"Cho",
+    hospitalname:"Arthi hospital",
+    address:"x street cbe",
+    contactnumber:"676867547954",
+    normalbed:"10/12",
+    icubed:"10/12",
+    o2bed:"10/12",
+    total:"30/36"
+}
+] 
+
+  
   return (
     <BrowserRouter>
       <Header/>
@@ -32,7 +57,7 @@ function App() {
           <Sidepan/>
           <Home/>
           <Cards/>
-           
+          <BedDetails details={details}/>
       </Route>
 
       <Route exact path="/contact">
@@ -52,7 +77,7 @@ function App() {
         </Route>
         <Switch>
         <Route exact path="/loginform"><Login/></Route>
-        <Route exact path="/registerform"><Update/></Route>
+        <Route exact path="/registerform"><Register/></Route>
 
         </Switch>
       </Switch>
