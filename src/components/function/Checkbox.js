@@ -1,51 +1,13 @@
 import React, { useState} from 'react';
 import  './Checkbox.css';
-import './Check'
-
  
 const Checkbox = () =>{
   const [isChecked,setIsChecked] = useState(new Map());
   const handleChange = (event) =>{
     setIsChecked(isChecked => isChecked.set(event.target.name,event.target.checked));
     console.log(isChecked);
-  }
- 
-  const checkboxes=[
-  {
-    name:'checkbox-1',
-    key:'checkBox1',
-    label:'Government'
-  },
-  {
-    name:'checkbox-2',
-    key:'checkBox2',
-    label:'Private'
-  }
-];
-
-  return(
-    <div>
-      <label>{isChecked.get("checkbox-1")}</label><br/>
-      {
-        checkboxes.map(item =>(
-          <label key={item.key}>
-            {item.name}
-            <Checkbox name={item.name} checked={isChecked.get(item.name)} onChange={handleChange}/>
-
-          </label>
-        ))
-      }
-    </div>
-  );
-    }
-    export default Checkbox;
-
-
-/*const Checkbox = () =>{
-  const [isChecked,setIsChecked] = useState("true");
-
    
-   
+  }
   return (
    <form>
       <h4 className="text">Coimbatore COVID Beds Availability Status</h4>
@@ -89,7 +51,49 @@ const Checkbox = () =>{
 }
 
 
-export default Checkbox*/
+export default Checkbox
+ 
+/*const Checkbox = () =>{
+  const [isChecked,setIsChecked] = useState(new Map());
+  const handleChange = (event) =>{
+    setIsChecked(isChecked => isChecked.set(event.target.name,event.target.checked));
+    console.log(isChecked);
+  }
+ 
+  const checkboxes=[
+  {
+    name:'checkbox-1',
+    key:'checkBox1',
+    label:'Government'
+  },
+  {
+    name:'checkbox-2',
+    key:'checkBox2',
+    label:'Private'
+  }
+];
+
+  return(
+    <div>
+       <h4 className="text">Coimbatore COVID Beds Availability Status</h4>
+      <label className="container">{isChecked.get("checkbox-1")}</label><br/>
+      {
+        checkboxes.map(item =>(
+          <label className="container" key={item.key}>
+          
+            {item.name}
+            <Checkbox name={item.name} checked={isChecked.get(item.name)} onChange={handleChange}/>
+
+          </label>
+        ))
+      }
+    </div>
+  );
+    }
+    export default Checkbox;
+
+*/
+/**/
 
  /*Checkbox() {
   return (
