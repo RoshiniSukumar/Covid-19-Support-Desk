@@ -5,7 +5,7 @@ import Footer from './components/function/Footer'
 import Navbar from './components/function/Navbar'
 import Checkbox from './components/function/Checkbox'
 import Searchbar from './components/function/Searchbar'
-import Sidepan from './components/function/Sidepan'
+ 
 import Contact from './components/function/Contact'
 import Home from './components/function/Home'
 import Exlinks from './components/function/Exlinks'
@@ -72,7 +72,7 @@ total:"30/36"
         <Route exact path="/">
           <Checkbox />
           <Searchbar/>
-          <Sidepan/>
+           
            <Home/> 
            
           <BedDetails details={details}/>
