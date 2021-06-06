@@ -118,11 +118,11 @@ img{
     max-height: 40%;
     max-width:40%px;
     position: absolute;
-    bottom:170px;
-    right:220px;
+    bottom:200px;
+    right:300px;
     object-fit: contain;
     margin:100px;
-    margin-left: 50px;
+    margin-left:-10px;
     padding:50px;
     opacity:.9;
 }
@@ -131,11 +131,11 @@ img{
     max-height: 40%;
     max-width:40%px;
     position: absolute;
-    bottom:170px;
-    right:-60px;
+    bottom:250px;
+    right:-30px;
     object-fit: contain;
     margin:100px;
-    margin-left: 50px;
+    margin-left: 10px;
     padding:50px;
-    opacity:.9;
+    opacity:1;
 }
