@@ -1,39 +1,39 @@
 import React from 'react'
 import './Cards.css'
+import Cards from './Cards'
  
-const BedDetails = (props) => {
+ const BedDetails = (props) => {
     console.log(props);
-
-    const renderBedDetails = props.details.map((detail) => {
-        return(
-            <div>
-            <div className="main center">
-            <div className="box center"> 
-          <h2> <div className="hname">{detail.hospitaltype} - 
-            {detail.hospitalname}</div></h2>
-           <div className="address">{detail.address} <br/>
-            Ph No:{detail.contactnumber}</div>
-           <div classname="beds">
-            <h4>Beds count in the form of Vacancy/Total</h4>
-           Normal:{detail.normalbed} <br/>
-           ICU:{detail.icubed} <br/>
-           Oxygen:{detail.o2bed} <br/>
-           Total:{detail.total}</div>
-           </div>
-           </div>
-           </div>
-        );
-    })
+    
+    const {details} = props;
+    var n=details.length;
+    console.log("length",n);
+     
+    const detailarr = []
+    for (let i = 0;i<n;i++){
+      var arr = details.slice(i*2,(i+1)*2);
+      console.log("arr",arr);
+      detailarr.push(
+        <div className="bedfloat"> 
+        { arr.map((del)=> 
+          <Cards detail={del}></Cards>
+        )}</div>
+      )
+    }
+     
+     console.log("detailarr",detailarr);
+    // const renderBedDetails = props.details.map((detail) => {
+    //     return(
+    //        <Cards detail={detail}></Cards>
+    //     );
+    // })
   return (
-    <div>
-       {renderBedDetails}
+    <div  >
+       { detailarr};
     </div>
   )
 }
-
  
-
-
 
 export default BedDetails
 
