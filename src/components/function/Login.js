@@ -12,8 +12,8 @@ import './Login.css'
    }
    
    const ValidationSchema = Yup.object({
-     email:Yup.string().email('Invalid email format').required('Required'),
-     password:Yup.string().required('Required')
+     email:Yup.string().email('Invalid email format').required('*Required'),
+     password:Yup.string().required('*Required')
    })
    
    const onSubmit = values => {
