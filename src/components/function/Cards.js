@@ -1,46 +1,38 @@
 import React from 'react'
 import './Cards.css'
 
-export default function Cards() {
-  return (
-    <div className="main center">
-    <div className="box center">
-    <h2 className="hname">CHO - ARUN HOSPITAL</h2> 
 
-              <div className="address"> <p>NEW SCHEME ROAD, Pollachi
-                    Coimbatore.
-                    <br/>
-                    Ph:9776553657
-                  </p></div> <br></br>                   
-                   
+const Cards = (props)  => {
+  const {hospitaltype,hospitalname,address,contactnumber, normalbed,icubed,o2bed,total} = props.detail;
+  
 
-                  <table classname="beds">
-                    <tr>
-                  <th>Bed type</th>
-                  <th>Vacant/Total</th>
-                  </tr>
-                  <tr>
-                    <td>Normal</td>
-                    <td>10/46</td>
-                    </tr>
-                    <tr><td>Oxygen</td>
-                    <td>0/32</td>
-                    </tr>
-                    <tr><td>ICU</td>
-                    <td>0/2</td>
-                      </tr> 
-                      <tr>
-                        <td>Total</td>
-                        <td>10/70</td>
-                      </tr>
-
-
-
-                  </table>
-    </div>
+  return(
+    <div className="cardalign">
+      <div className="main center">
+          <div className="box center"> 
+        <h2> <div className="hname">{hospitaltype} - 
+          { hospitalname}</div></h2>
+         <div className="address">Address:<br/>&emsp;{address} <br/>
+          Ph No:{contactnumber}</div><br/>
+         <div classname="beds">
+          <h4>&emsp;&emsp;&emsp; Vacancy/Total</h4>
+         Normal:&emsp;{normalbed} <br/>
+         ICU:&emsp;&emsp;&emsp;{icubed} <br/>
+         Oxygen:&emsp;{o2bed} <br/>
+         Total:&emsp;&emsp;&emsp;{total}</div>
+          
+         </div>
+         </div>
     </div>
   )
 }
+
+export default Cards; 
+   
+
+/*
+         */
+ 
 
 /*
 <div className="main center">
