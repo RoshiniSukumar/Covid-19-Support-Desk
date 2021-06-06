@@ -13,9 +13,7 @@ import Login from './components/function/Login'
 import LoginNavbar from './components/function/LoginNavbar'
 import About from './components/function/About'
 import Register from './components/function/Register'
-import Cards from './components/function/Cards'
 import Socialmediabar from './components/function/Socialmediabar'
- 
 import {BrowserRouter,Route,Switch} from "react-router-dom"
 import BedDetails from './components/function/BedDetails'
  
@@ -42,6 +40,26 @@ function App() {
     icubed:"10/12",
     o2bed:"10/12",
     total:"30/36"
+},
+{
+  hospitaltype:"Cho",
+  hospitalname:"Arun hospital",
+  address:"x street cbe",
+  contactnumber:"676867547954",
+  normalbed:"10/12",
+  icubed:"10/12",
+  o2bed:"10/12",
+  total:"30/36"
+},
+{
+hospitaltype:"Cho",
+hospitalname:"Arthi hospital",
+address:"x street cbe",
+contactnumber:"676867547954",
+normalbed:"10/12",
+icubed:"10/12",
+o2bed:"10/12",
+total:"30/36"
 }
 ] 
 
@@ -55,8 +73,8 @@ function App() {
           <Checkbox />
           <Searchbar/>
           <Sidepan/>
-          <Home/>
-          <Cards/>
+           <Home/> 
+           
           <BedDetails details={details}/>
       </Route>
 
@@ -84,10 +102,6 @@ function App() {
       <Socialmediabar/>
       <Footer/>
     </BrowserRouter>
-     
-     
-     
-     
     
   )
 }
