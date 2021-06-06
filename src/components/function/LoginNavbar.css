@@ -73,7 +73,7 @@ ol li{
     transition-delay: 0.2s;
 }
 ol li a{
-    color:blueviolet;
+    color:darkmagenta;
     text-decoration:none;
     font-weight: bold;
     font-family: 'Times New Roman', Times, serif;
@@ -145,7 +145,7 @@ ol li:hover{
 .full{
     position:relative;
     bottom:820px;
-    left:700px;
+    left:800px;
     margin:30px;
      text-decoration:none;
 }
