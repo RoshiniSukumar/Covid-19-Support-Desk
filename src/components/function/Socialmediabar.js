@@ -5,7 +5,8 @@ import {
   faFacebook,
   faTwitter,
   faInstagram,
-  faWhatsapp
+  faWhatsapp,
+  
 } from "@fortawesome/free-brands-svg-icons";
 import './Socialmediabar.css'
 
@@ -40,6 +41,7 @@ export default function Socialmediabar() {
       >
         <FontAwesomeIcon icon={faWhatsapp} size="2x" />
       </a>
+      
     </div>
   );
 }
