@@ -66,6 +66,8 @@ const StepOne = (props) => {
   const handleSubmit = (values) => {
     props.next(values);
   };
+  // props.addDetails(data);
+  // console.log(data);
 
   return (
     <Formik
@@ -80,7 +82,8 @@ const StepOne = (props) => {
           <p className="lbl">Email</p>
           <Field name="email" />
           <div className="required">
-          <ErrorMessage name="email"  />
+          <ErrorMessage name="email" />
+           
           </div>
           
           
