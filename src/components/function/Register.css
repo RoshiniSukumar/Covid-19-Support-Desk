@@ -28,7 +28,7 @@
     margin:8% auto;
     margin-left:350px;
     
-    background:whitesmoke;
+    background:white;
     border-radius: 5px;
     position: relative;
     overflow:hidden;
@@ -39,7 +39,7 @@
 h3{
     text-align: center;
     margin-bottom: 20px;
-    color:#777;
+    color:gray;
     padding-top: 20px;
     font-family: 'Times New Roman', Times, serif;
     font-size: 28px;
@@ -64,7 +64,7 @@ form input{
     background:transparent;
 }
 ::placeholder{
-    color:#777
+    color:darkgrey;
 }
 .btn-box{
     width:100%;
@@ -100,6 +100,7 @@ form button{
     margin-bottom: 5px;
     position: relative;
     left:50px;
+    color:black;
  }
  input + .lbl{
     font-weight: bold;
