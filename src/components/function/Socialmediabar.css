@@ -48,4 +48,11 @@
     position: relative;
     right:320px;
   }
-  
+  .myinfo{
+    position:relative;
+    left:1000px;
+    bottom:30px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+  }
