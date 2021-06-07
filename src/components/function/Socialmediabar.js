@@ -41,7 +41,7 @@ export default function Socialmediabar() {
       >
         <FontAwesomeIcon icon={faWhatsapp} size="2x" />
       </a>
-      
+      <p className="myinfo">Admin:<br/>&emsp;Roshini S<br/>&emsp;sroshini2408@gmail.com</p>
     </div>
   );
 }
