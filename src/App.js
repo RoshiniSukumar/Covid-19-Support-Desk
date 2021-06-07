@@ -1,11 +1,10 @@
 
-import React from 'react'
+import React,{useState} from 'react'
 import Header from './components/function/Header'
 import Footer from './components/function/Footer'
 import Navbar from './components/function/Navbar'
 import Checkbox from './components/function/Checkbox'
 import Searchbar from './components/function/Searchbar'
- 
 import Contact from './components/function/Contact'
 import Home from './components/function/Home'
 import Exlinks from './components/function/Exlinks'
@@ -20,6 +19,11 @@ import BedDetails from './components/function/BedDetails'
 
 
 function App() {
+//     const [details,setDetails] = useState([]);
+//     const addDetails = (detail) => {
+//       console.log(detail);
+// };
+
   const details =[
     {
       hospitaltype:"Cho",
@@ -95,7 +99,7 @@ total:"30/36"
         </Route>
         <Switch>
         <Route exact path="/loginform"><Login/></Route>
-        <Route exact path="/registerform"><Register/></Route>
+        <Route exact path="/registerform" ><Register/></Route>
 
         </Switch>
       </Switch>
