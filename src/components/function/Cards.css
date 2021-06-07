@@ -1,5 +1,3 @@
- 
-
 .center{
     display:flex;
     justify-content: center;
@@ -8,6 +6,7 @@
 .main{
     width: 100%;
     height: 100%;
+    font-size: 20px;
 }
 .box{
     width:500px;
@@ -42,10 +41,10 @@
 
 }
 .box .address{
-    margin:10px 70px 80px 10px;
+    margin:40px 70px 80px 10px;
     transform: translateY(200px);
     
-    transition: all 1.1s;
+transition: all 1.1s;
     color:darkblue;
     font-family: 'Times New Roman', Times, serif;
 }
@@ -53,20 +52,20 @@
     transform:translateY(110px);
 }
 .beds{
-    position: relative;
+    position: absolute;
     right:50px;
-
+    color:#e7627d;
 }
 .boxcenter .beds{
-    margin:0px 50px 20px 10px;
+    margin:0px 10px 20px 10px;
      
-    color:green;
+     
     text-align: center;
      
      
 }
 .box:hover .beds{
-    transform: translateY(0px);
+    transform: translateY(50px);
 }
 .bedfloat{
      display: flex;
@@ -77,11 +76,9 @@
 .cardalign{
      margin-left: 150px;
      margin-top: 100px;
-
      position: relative;
      left:200px;
      top:50px;
-
 }
 /* .wrap{
     height: auto;
