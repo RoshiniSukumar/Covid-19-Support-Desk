@@ -14,8 +14,8 @@ const validate = (values) => {
   if (!values.email) {
     error.email = "* Required Field";
   }
-  if (!values.pass) {
-    error.pass = "* Required Field";
+  if (!values.password) {
+    error.password = "* Required Field";
   }
   return error;
 };
@@ -39,63 +39,69 @@ function Login(props) {
   return (
      <div className="cont">
        <div className="user-signin">
-         <div className="imgbx"><img src=""></img></div>
-         <div className="formbx"></div>
-    <form  onSubmit={formik.handleSubmit}>
-      <body >
-      <h3>Sign In</h3>
-      
+         <div className="imgbx"><img className="img4" src="./images/image4.jpeg"></img></div>
+          
+    <form  className="formbx" onSubmit={formik.handleSubmit}>
+      <body  >
+      <div className="formin">
+      <h3 className="formhead">Sign In</h3>
+
         
-          <label className='dest' forhtml="email" >Email:
+          <label className='lb' forhtml="email" >Email:
           </label>{" "}
                {" "}
+               <br/>
+               &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
         <input
           type="email"
           name="email"
-          placeholder="Your Email"
-          className="box-log"
+          placeholder="Hospital's Email"
+          className="ip"
           onChange={formik.handleChange}
           value={formik.values.email}
           onBlur={formik.handleBlur}
         />{" "}
         {formik.touched.email && formik.errors.email ? (
-          <div  className='required'> {formik.errors.email} </div>
+          <div  className='required'>v&emsp;&emsp;&emsp;&emsp;&emsp; {formik.errors.email} </div>
         ) : null}{" "}
               {" "}
       <br></br>
 
        
-          <label className='dest' forhtml="pass" >
+          <label className="lb"  forhtml="pass" >
             Password:
           </label>{" "}
         {" "}
+        <br/>
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
         <input
           type="password"
           name="pass"
           placeholder="Your Password"
-          className="box-log"
+          className="ip"
           onChange={formik.handleChange}
           value={formik.values.pass}
           onBlur={formik.handleBlur}
         />{" "}
         {formik.touched.pass && formik.errors.pass ? (
-          <div  className='required'> {formik.errors.pass} </div>
+          <div  className='required'>&emsp; &emsp;&emsp;&emsp;&emsp;{formik.errors.pass} </div>
         ) : null}{" "}
         
        {" "}
       <br></br>
 
       
-      <button  type="submit" className='login-submit'>
+      <button  type="submit" className='loginbtn'>
         {" "}
         Login{" "}
       </button>{" "}
       <p className="signup">Don't have an account? <a href="#">Sign-Up</a></p>
-       
+      </div>
     </body>
     </form>
     </div>
     </div>
+     
   );
 }
 
