@@ -9,13 +9,13 @@ import Contact from './components/function/Contact'
 import Home from './components/function/Home'
 import Exlinks from './components/function/Exlinks'
 import Login from './components/function/Login'
-import LoginNavbar from './components/function/LoginNavbar'
+import Links from './components/function/Links'
 import About from './components/function/About'
 import Register from './components/function/Register'
 import Socialmediabar from './components/function/Socialmediabar'
 import {BrowserRouter,Route,Switch} from "react-router-dom"
 import BedDetails from './components/function/BedDetails'
- 
+import FormDetails from './components/function/FormDetails'
 
 
 function App() {
@@ -74,6 +74,7 @@ total:"30/36"
       <Navbar/>
       <Switch>
         <Route exact path="/">
+         <Links/>
           <Checkbox />
           <Searchbar/>
            
@@ -93,15 +94,17 @@ total:"30/36"
       </Route>
 
       <Route exact path="/login">
-         
-        <LoginNavbar/>
-         
-        </Route>
-        <Switch>
-        <Route exact path="/loginform"><Login/></Route>
-        <Route exact path="/registerform" ><Register/></Route>
 
-        </Switch>
+         <p className="condition">***This page is for hospital use only!</p>
+       
+        <Login/> 
+        {/* <Route exact path="/details">  <FormDetails/>  </Route> */}
+        </Route>
+         
+         
+        <Route exact path="/register" ><Register/></Route>
+
+         
       </Switch>
       <Socialmediabar/>
       <Footer/>
