@@ -5,10 +5,10 @@ body {
   overflow-x: hidden;
   color:white;
   /* background-image: radial-gradient( lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%); */
-  /* background-image: radial-gradient(  #ebc0fd 0%, #d9ded8 100%); */
+  background-image: radial-gradient(  #ebc0fd 0%, #d9ded8 100%);
   /* background-image: radial-gradient(  #a8caba 0%, #5d4157 100%); */
-   background: radial-gradient( #BCC5CE 0%, #929EAD 98%), radial-gradient(  rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
- background-blend-mode: screen;
+   /* background: radial-gradient( #BCC5CE 0%, #929EAD 98%), radial-gradient(  rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
+ background-blend-mode: screen; */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
