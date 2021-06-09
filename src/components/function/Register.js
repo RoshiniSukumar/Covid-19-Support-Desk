@@ -1,5 +1,8 @@
 import React from 'react'
 import {Formik,useFormik} from "formik";
+import { Link } from "react-router-dom"
+import './Register.css'
+import FormDetails from './FormDetails';
 
 
 const initialValues = {
@@ -16,15 +19,31 @@ const validate = (values) => {
   if (!values.password) {
     error.password = "* Required Field";
   }
-  if (values.confirmpassword!='password') {
-    error.confirmpassword = "* Passwords must match!";
-    elseif(!values.confirmpassword){
-      error.confirmpassword = "* Required Field";
-    }
+  // if ("values.password "!= values.confirmpassword){
+  //   error.confirmpassword = "* Passwords must match!";
+  //   // elif(!values.confirmpassword)
+  //   //   error.confirmpassword = "* RequiredField";
+    
+  // }
+  if(values.password && values.confirmpassword){
+    if(values.password !== values.confirmpassword)
+    error.confirmpassword = "* Passwords must match!"
   }
-
   return error;
 };
+
+  
+
+// constValidateConfirmPassword = (password,values) =>{
+//   let error="";
+//   if(password && values){
+//     if(password!== values)
+//     error = "* Passwords must match!"
+//   }
+// }
+// return error;
+// };
+
 
 function Register(props){
   const onSubmit = async (values) => {
@@ -39,10 +58,103 @@ function Register(props){
   const formik = useFormik({
     initialValues,
     onSubmit,
-    validate,
+    validate
   });
   
+  return (
+    <div className="cont1">
+      <div className="user-signin1">
+        
+   <form  className="formbx1" onSubmit={formik.handleSubmit}>
+     <body  >
+     <div className="formin1">
+     <h3 className="formhead1">Create an Account</h3>
+
+       
+         <label className='lb1' forhtml="email" >Email:
+         </label>{" "}
+              {" "}
+              <br/>
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+       <input
+         type="email"
+         name="email"
+         placeholder="Hospital's Email"
+         className="ip1"
+         onChange={formik.handleChange}
+         value={formik.values.email}
+         onBlur={formik.handleBlur}
+       />{" "}
+       {formik.touched.email && formik.errors.email ? (
+         <div  className='required1'>v&emsp;&emsp;&emsp;&emsp;&emsp; {formik.errors.email} </div>
+       ) : null}{" "}
+             {" "}
+     <br></br>
+
+      
+         <label className="lb1"  forhtml="password" >
+           Password:
+         </label>{" "}
+       {" "}
+       <br/>
+       &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+       <input
+         type="password"
+         name="password"
+         placeholder="Create Password"
+         className="ip1"
+         onChange={formik.handleChange}
+         value={formik.values.password}
+         onBlur={formik.handleBlur}
+       />{" "}
+       {formik.touched.password && formik.errors.password ? (
+         <div  className='required1'>&emsp; &emsp;&emsp;&emsp;&emsp;{formik.errors.password} </div>
+       ) : null}{" "}
+       
+      {" "}
+     <br></br>
+
+     <label className="lb1"  forhtml="confirmpassword" >
+           Confirm Password:
+         </label>{" "}
+       {" "}
+       <br/>
+       &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+       <input
+         type="password"
+         name="confirmpassword"
+         placeholder="Confirm Password"
+         className="ip1"
+         onChange={formik.handleChange}
+         value={formik.values.confirmpassword}
+         onBlur={formik.handleBlur}
+       />{" "}
+       {formik.touched.confirmpassword && formik.errors.confirmpassword ? (
+         <div  className='required1'>&emsp; &emsp;&emsp;&emsp;&emsp;{formik.errors.confirmpassword} </div>
+       ) : null}{" "}
+       
+      {" "}
+     <br></br>
+
+     <button  type="submit" className='loginbtn1'  onClick={formik.handleSubmit}>
+       {" "}
+      <Link to ="/details" >Sign-up</Link>{" "}
+     </button>{" "}
+     <p className="signup1">Already have an account? <a href="/login">Sign-In</a></p>
+     </div>
+   </body>
+   </form>
+   <div className="imgbx1"><img className="img5" src="./images/img5.jpg"></img></div>
+   
+   </div>
+   </div>
+    
+ );
 }
+
+export default Register;
+
+
 // import { useState } from "react";
 // import { Formik, Form, Field, ErrorMessage } from "formik";
 // import * as Yup from "yup";
