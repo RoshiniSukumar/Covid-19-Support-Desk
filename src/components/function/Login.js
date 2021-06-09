@@ -1,5 +1,7 @@
 import React from "react";
 import { Formik, useFormik } from "formik";
+
+
 import './Login.css'
  
 
@@ -33,13 +35,14 @@ function Login(props) {
   const formik = useFormik({
     initialValues,
     onSubmit,
-    validate,
+    validate
   });
   
   return (
+      
      <div className="cont">
        <div className="user-signin">
-         <div className="imgbx"><img className="img4" src="./images/image4.jpeg"></img></div>
+         <div className="imgbx"><img className="img4" src="./images/img4.jpg"></img></div>
           
     <form  className="formbx" onSubmit={formik.handleSubmit}>
       <body  >
@@ -76,26 +79,26 @@ function Login(props) {
         &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
         <input
           type="password"
-          name="pass"
+          name="password"
           placeholder="Your Password"
           className="ip"
           onChange={formik.handleChange}
-          value={formik.values.pass}
+          value={formik.values.password}
           onBlur={formik.handleBlur}
         />{" "}
-        {formik.touched.pass && formik.errors.pass ? (
-          <div  className='required'>&emsp; &emsp;&emsp;&emsp;&emsp;{formik.errors.pass} </div>
+        {formik.touched.password && formik.errors.password ? (
+          <div  className='required'>&emsp; &emsp;&emsp;&emsp;&emsp;{formik.errors.password} </div>
         ) : null}{" "}
         
        {" "}
       <br></br>
 
       
-      <button  type="submit" className='loginbtn'>
+     <button  type="submit" className='loginbtn' onClick={formik.handleSubmit}  >
         {" "}
         Login{" "}
-      </button>{" "}
-      <p className="signup">Don't have an account? <a href="#">Sign-Up</a></p>
+      </button>{" "} 
+      <p className="signup">Don't have an account? <a href="/register">Sign-Up</a></p>
       </div>
     </body>
     </form>
