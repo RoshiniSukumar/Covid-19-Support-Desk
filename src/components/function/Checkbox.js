@@ -9,7 +9,7 @@ const Checkbox = () =>{
    
   }
   return (
-   <form>
+   <form className="chkbx">
       <h4 className="text">Coimbatore COVID Beds Availability Status</h4>
        
         
