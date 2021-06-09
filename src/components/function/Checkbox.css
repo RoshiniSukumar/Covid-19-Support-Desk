@@ -13,6 +13,10 @@
     position:relative;
     left:20px;
 }
+.chkbx{
+    position:relative;
+    bottom:250px;
+}
 /*checkboxes*/
 .container{
     display:block;
