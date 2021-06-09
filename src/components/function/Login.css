@@ -372,3 +372,11 @@ input[type="submit"]{
 .required{
   color:red;
 }
+.condition{
+  color:darkblue;
+  font-size: 25px;
+  font-weight: bolder;
+  position: relative;
+  top:30px;
+  left:500px;
+}
