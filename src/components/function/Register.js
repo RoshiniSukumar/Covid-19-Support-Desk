@@ -1,9 +1,8 @@
 import React from 'react'
 import {Formik,useFormik} from "formik";
-import { Link } from "react-router-dom"
+ 
 import './Register.css'
-import FormDetails from './FormDetails';
-
+ 
 
 const initialValues = {
   email:"",
@@ -51,9 +50,12 @@ function Register(props){
       email: values.email,
       password: values.password,
       confirmpassword:values.confirmpassword
+
     };
+    
 
     console.log(values.add)
+      
   };
   const formik = useFormik({
     initialValues,
@@ -136,9 +138,9 @@ function Register(props){
       {" "}
      <br></br>
 
-     <button  type="submit" className='loginbtn1'  onClick={formik.handleSubmit}>
+     <button  type="submit" className='loginbtn1'  onClick={formik.handleSubmit } >
        {" "}
-      <Link to ="/details" >Sign-up</Link>{" "}
+       Sign-up {" "}
      </button>{" "}
      <p className="signup1">Already have an account? <a href="/login">Sign-In</a></p>
      </div>
@@ -148,9 +150,8 @@ function Register(props){
    
    </div>
    </div>
-    
- );
-}
+  );
+       }
 
 export default Register;
 
