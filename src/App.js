@@ -16,7 +16,7 @@ import Socialmediabar from './components/function/Socialmediabar'
 import {BrowserRouter,Route,Switch} from "react-router-dom"
 import BedDetails from './components/function/BedDetails'
 import FormDetails from './components/function/FormDetails'
-
+ 
 
 function App() {
 //     const [details,setDetails] = useState([]);
@@ -98,11 +98,15 @@ total:"30/36"
          <p className="condition">***This page is for hospital use only!</p>
        
         <Login/> 
-        {/* <Route exact path="/details">  <FormDetails/>  </Route> */}
+        
+              
         </Route>
          
          
-        <Route exact path="/register" ><Register/></Route>
+        <Route exact path="/register" ><Register/>
+         
+        {/* <FormDetails exact path="/details" />  */}
+        </Route>
 
          
       </Switch>
