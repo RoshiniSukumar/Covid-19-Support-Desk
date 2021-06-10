@@ -136,7 +136,7 @@ ol li:hover{
 .video{
     position:relative;
     top: 550px;
-    left:650px;
+    left:600px;
     margin-bottom: 50px;
 }
 
@@ -144,7 +144,7 @@ ol li:hover{
 /*other links*/
 .full{
     position:relative;
-    bottom:250px;
+    bottom:350px;
     left:20px;
     margin:40px;
      text-decoration:none;
