@@ -65,7 +65,7 @@ function Login(props) {
           onBlur={formik.handleBlur}
         />{" "}
         {formik.touched.email && formik.errors.email ? (
-          <div  className='required'>v&emsp;&emsp;&emsp;&emsp;&emsp; {formik.errors.email} </div>
+          <div  className='required'>&emsp;&emsp;&emsp;&emsp;&emsp; {formik.errors.email} </div>
         ) : null}{" "}
               {" "}
       <br></br>
