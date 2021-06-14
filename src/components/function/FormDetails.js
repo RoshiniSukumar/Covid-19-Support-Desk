@@ -1,6 +1,6 @@
 import React from "react";
 import { Formik, useFormik } from "formik";
-// import './FormDetails.css'
+import './FormDetails.css'
 
 const  initialValues={
          
@@ -18,7 +18,7 @@ const  initialValues={
       let error = {};
      
       if (!values.hospitaltype) {
-        error.hospitaltype = " Required Field";
+        error.hospitaltype = "* Required Field";
       }
       if (!values.hospitalname ) {
         error.hospitalname  = "* Required Field";
@@ -26,20 +26,20 @@ const  initialValues={
       if (!values.address ) {
         error.address  = "* Required Field";
       }
-      if (!values. contactnumber) {
+      if (!values.contactnumber) {
         error.contactnumber  = "* Required Field";
       }
       if (!values.normalbed ) {
         error.normalbed  = "* Required Field";
       }
       if (!values.icubed ) {
-        error. icubed = "* Required Field";
+        error.icubed = "* Required Field";
       }
       if (!values.o2bed ) {
-        error. o2bed = "* Required Field";
+        error.o2bed = "* Required Field";
       }
       if (!values. total) {
-        error. total = "* Required Field";
+        error.total = "* Required Field";
       }
       return error;
     };
@@ -87,8 +87,8 @@ return (
           value={formik.values.hospitaltype}
           onBlur={formik.handleBlur}
         />{" "}
-        {formik.touched. hospitaltype && formik.errors. hospitaltype ? (
-          <div  className='required2'>v&emsp;&emsp;&emsp;&emsp;&emsp; {formik.errors. hospitaltype} </div>
+        {formik.touched.hospitaltype && formik.errors.hospitaltype ? (
+          <div  className='required2'>&emsp;&emsp;&emsp;&emsp;&emsp; {formik.errors.hospitaltype} </div>
         ) : null}{" "}
               {" "}
       <br/><br/><br/>
@@ -105,11 +105,11 @@ return (
           placeholder=" Enter Hospital Name"
           className="ip2"
           onChange={formik.handleChange}
-          value={formik.values. hospitalname}
+          value={formik.values.hospitalname}
           onBlur={formik.handleBlur}
         />{" "}
-        {formik.touched. hospitalname  && formik.errors. hospitalname ? (
-          <div  className='required2'>&emsp; &emsp;&emsp;&emsp;&emsp;{formik.errors. hospitalname } </div>
+        {formik.touched. hospitalname  && formik.errors.hospitalname ? (
+          <div  className='required2'>&emsp; &emsp;&emsp;&emsp;&emsp;{formik.errors.hospitalname } </div>
         ) : null}{" "}
         
        {" "}
@@ -127,11 +127,11 @@ return (
           placeholder=" Enter Hospital Address"
           className="ip2"
           onChange={formik.handleChange}
-          value={formik.values.  address }
+          value={formik.values.address }
           onBlur={formik.handleBlur}
         />{" "}
-        {formik.touched. address  && formik.errors. address ? (
-          <div  className='required2'>&emsp; &emsp;&emsp;&emsp;&emsp;{formik.errors. address } </div>
+        {formik.touched.address  && formik.errors.address ? (
+          <div  className='required2'>&emsp; &emsp;&emsp;&emsp;&emsp;{formik.errors.address } </div>
         ) : null}{" "}
         
        {" "}
@@ -152,7 +152,7 @@ return (
           value={formik.values.contactnumber}
           onBlur={formik.handleBlur}
         />{" "}
-        {formik.touched. contactnumber  && formik.errors.contactnumber? (
+        {formik.touched.contactnumber  && formik.errors.contactnumber? (
           <div  className='required2'>&emsp; &emsp;&emsp;&emsp;&emsp;{formik.errors.contactnumber } </div>
         ) : null}{" "}
         
@@ -171,11 +171,11 @@ return (
           placeholder=" Enter Normal beds count as Vacancy/Total"
           className="ip2"
           onChange={formik.handleChange}
-          value={formik.values. normalbed}
+          value={formik.values.normalbed}
           onBlur={formik.handleBlur}
         />{" "}
-        {formik.touched.  normalbed  && formik.errors. normalbed? (
-          <div  className='required2'>&emsp; &emsp;&emsp;&emsp;&emsp;{formik.errors. normalbed } </div>
+        {formik.touched.normalbed  && formik.errors.normalbed? (
+          <div  className='required2'>&emsp; &emsp;&emsp;&emsp;&emsp;{formik.errors.normalbed } </div>
         ) : null}{" "}
         
        {" "}
@@ -193,7 +193,7 @@ return (
           placeholder=" Enter  ICU beds count as Vacancy/Total"
           className="ip2"
           onChange={formik.handleChange}
-          value={formik.values. icubed }
+          value={formik.values.icubed }
           onBlur={formik.handleBlur}
         />{" "}
         {formik.touched.icubed  && formik.errors.icubed? (
