@@ -15,8 +15,9 @@ import Register from './components/function/Register'
 import Socialmediabar from './components/function/Socialmediabar'
 import {BrowserRouter,Route,Switch} from "react-router-dom"
 import BedDetails from './components/function/BedDetails'
-import FormDetails from './components/function/FormDetails'
- 
+ import FormDetails from './components/function/FormDetails'
+import Tracker from  './components/function/Tracker'
+import Signup from './components/function/Signup'
 
 function App() {
 //     const [details,setDetails] = useState([]);
@@ -82,6 +83,11 @@ total:"30/36"
            
           <BedDetails details={details}/>
       </Route>
+      
+      <Route exact path="/tracker">
+        <Tracker/>
+      </Route>
+
 
       <Route exact path="/contact">
         <Contact/>
@@ -101,12 +107,15 @@ total:"30/36"
         
               
         </Route>
-         
-         
-        <Route exact path="/register" ><Register/>
-         
-        {/* <FormDetails exact path="/details" />  */}
+        <Route exact path="/register" > 
+        <Signup/>
         </Route>
+
+        <Route exact path="/register/details" > 
+        <FormDetails/>
+        </Route>
+        
+        
 
          
       </Switch>
