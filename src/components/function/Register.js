@@ -2,6 +2,7 @@ import React from 'react'
 import {Formik,useFormik} from "formik";
  
 import './Register.css'
+import { Redirect } from 'react-router-dom';
  
 
 const initialValues = {
@@ -45,14 +46,26 @@ const validate = (values) => {
 
 
 function Register(props){
+  
+  var sign=false
+
   const onSubmit = async (values) => {
+    //  props.set(true)
+      
+    
     values.add = {
+
       email: values.email,
       password: values.password,
       confirmpassword:values.confirmpassword
 
     };
-    
+
+    // if (sign == true)  {
+    //   console.log(sign)
+    //   return <Redirect to={"/register/details"}/>
+    // }
+     signbt() 
 
     console.log(values.add)
       
@@ -63,6 +76,10 @@ function Register(props){
     validate
   });
   
+    var signbt=()=>{
+    
+    props.set(true)
+  }
   return (
     <div className="cont1">
       <div className="user-signin1">
@@ -88,7 +105,7 @@ function Register(props){
          onBlur={formik.handleBlur}
        />{" "}
        {formik.touched.email && formik.errors.email ? (
-         <div  className='required1'>v&emsp;&emsp;&emsp;&emsp;&emsp; {formik.errors.email} </div>
+         <div  className='required1'>&emsp;&emsp;&emsp;&emsp;&emsp; {formik.errors.email} </div>
        ) : null}{" "}
              {" "}
      <br></br>
@@ -138,9 +155,13 @@ function Register(props){
       {" "}
      <br></br>
 
-     <button  type="submit" className='loginbtn1'  onClick={formik.handleSubmit } >
+     {/* <button  type="submit" className='loginbtn1'  onClick={formik.handleSubmit } >
        {" "}
        Sign-up {" "}
+     </button>{" "} */}
+     <button  type="submit" className='loginbtn1'  onClick={formik.handleSubmit} >
+       {" "}
+       Sign-Up {" "}
      </button>{" "}
      <p className="signup1">Already have an account? <a href="/login">Sign-In</a></p>
      </div>
