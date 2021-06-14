@@ -5,7 +5,9 @@
    return (
      <div className="body">
        <nav>
-         <Link to="/"  >Home</Link>
+        
+         <Link to="/">Home</Link>
+         <Link Link to="/tracker">Covid Tracker</Link>
          <Link to="/login">Hospital-login</Link>
          <Link to="/about">About</Link>
          <Link to="/contact">Whom to Contact</Link>
