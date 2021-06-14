@@ -7,7 +7,7 @@
 }
     
 .text1{
-    color:white;
+    color: black;
     background-color: #2691d9;
 }
 /*body{
@@ -33,7 +33,7 @@
 }
 .search:hover{
     width:300px;
-
+    color:white;
 }
 .search:hover i{
     position:absolute;
@@ -58,7 +58,10 @@
     display:none;
 
 }
-.search i{
-    color:white;
-    font-size:22px;
+.search_icon{
+     fill:white;
+     position: relative;
+     left:130px;
+     bottom:10px;
+     
 }
