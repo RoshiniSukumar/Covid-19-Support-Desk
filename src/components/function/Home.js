@@ -9,8 +9,8 @@ export default function Home() {
         </div>
         <div className="gif1">
         <img src='./images/covid.gif' alt="covid" width="300" height="300"></img>
-        </div>
-        </div>
+        </div></div>
+         
   )
 }
  /*<div>
