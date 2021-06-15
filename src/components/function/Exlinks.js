@@ -49,20 +49,11 @@ export default function Exlinks() {
 </div>
 </div>
  
+
    </div>
-     
-   
      
     
   );
 }
 
-/*import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import{
-  faFacebook,
-  faTwitter,
-  faGoogle,
-  faLinkedIn,
-  faInstagram
-
-}from "@fortawesome/fontawesome-free";*/
+  
