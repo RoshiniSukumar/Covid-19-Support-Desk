@@ -6,8 +6,8 @@ function Tracker() {
 // var [data, setdata] = useState([])
     const [datas, setdatas] = useState(undefined)
     var data=[]
-    var flag=""
-    var country=""
+    // var flag=""
+    // var country=""
     var active=""
     var cases=""
     var critical=""
@@ -24,8 +24,8 @@ function Tracker() {
         console.log("hxJZ")
     data=datas.data
 
-         flag=data.countryInfo.flag
-         country=data.country
+        //  flag=data.countryInfo.flag
+        //  country=data.country
          active=data.active
          cases=data.cases
          critical=data.critical
@@ -38,10 +38,10 @@ function Tracker() {
     
       <div class="contai">
      
-    
-    <div classname="hed1"> 
-    <h1 >Covid-19 Cases In India <span id="country"></span> <img src="" alt="country" id="flag"></img></h1>
-    </div>
+     <img src="./images/flag.jpg" alt="country" id="flag"></img>
+     
+    <h1 >Covid-19 Cases In India <span id="country"></span> </h1>
+  
     <div class="content2">
         <div class="box3">
             <div class="subtitle active" >Active Cases  </div>
