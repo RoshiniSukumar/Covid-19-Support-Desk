@@ -2,7 +2,7 @@ import React from 'react'
 import {Formik,useFormik} from "formik";
  
 import './Register.css'
-import { Redirect } from 'react-router-dom';
+// import { Redirect } from 'react-router-dom';
  
 
 const initialValues = {
@@ -81,7 +81,9 @@ function Register(props){
     props.set(true)
   }
   return (
+    
     <div className="cont1">
+      
       <div className="user-signin1">
         
    <form  className="formbx1" onSubmit={formik.handleSubmit}>
