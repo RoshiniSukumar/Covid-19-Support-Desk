@@ -23,12 +23,16 @@ const validate = (values) => {
 };
 
 function Login(props) {
+   
+  var sign=false
   
   const onSubmit = async (values) => {
     values.add = {
       email: values.email,
       password: values.password,
     };
+      
+    signbt() 
 
     console.log(values.add)
   };
@@ -37,7 +41,11 @@ function Login(props) {
     onSubmit,
     validate
   });
-  
+  var signbt=()=>{
+    
+    props.set(true)
+  }
+
   return (
       
      <div className="cont">
