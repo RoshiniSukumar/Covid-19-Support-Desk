@@ -4,12 +4,22 @@ import './Home.css'
 export default function Home() {
   return (
          <div>
-        <div className="gifs">
+           <div className="gif1">
+           <img src='./images/covid.gif' alt="covid" width="200" height="200"></img>
+           </div> 
+           <img className="bg" src="./images/newpgedit.jpg" alt="bg"></img>
+          <img className="ic" src="./images/android-chrome-512x512.png" alt="icon"></img>
+          </div>
+
+
+           
+        /* <div className="gifs">
          <img src='./images/tenor.gif' alt="tenor" width="400" height="400"></img>
-        </div>
-        <div className="gif1">
-        <img src='./images/covid.gif' alt="covid" width="300" height="300"></img>
-        </div></div>
+        </div>*/
+
+
+        
+        // </div> 
          
   )
 }
