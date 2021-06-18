@@ -4,3 +4,119 @@
     position: relative;
     top: 400px;
 }
+.mine{
+    text-align: left;
+    color:coral;
+    font-size: 35px;
+    position:relative;
+    top:270px;
+    left:420px;
+    animation-name:ex1;
+    animation-duration:.10s;
+    animation-iteration-count:infinite;
+    z-index: 1;
+}
+@keyframes ex1{
+    0% {color:coral;}
+    20% {color:red;}
+    /* 40% {color:black;} */
+    60% {color:indigo;}
+    /* 80% {color:darkgreen;} */
+    /* 100% {color:darkblue;} */
+}
+.minedet{
+    text-align:justify;
+    position: relative;
+    left:400px;
+    font-size: 30px;
+    color:white;
+}
+.mail{
+    text-decoration: none;
+    color:black;
+}
+
+/* section::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left,#f00,#ff0,#f00,#0f0,#ff0,#0ff,#00f);
+    mix-blend-mode: color;
+}
+
+video{
+    object-fit: cover;
+} */
+
+/* .minedet
+{
+    position: absolute;
+    top: 40%;
+    transform: translateY(-40%);
+    width: 100%;
+    text-align: center;
+    color: rgb(52, 250, 12);
+    font-size: 5em;
+}
+
+.minedet {
+    display: inline-block;
+    animation: animate 1s linear forwards;
+    opacity: 0;
+} */
+
+/* @keyframes animate{
+    0%{
+        opacity: 0;
+        transform: rotateY(90deg);
+        filter: blur(10px);
+    }
+    100%{
+        opacity: 1;
+        transform: rotateY(0deg);
+        filter: blur(0px);
+    }
+} */
+.ic1{
+    fill:cornflowerblue;
+}
+
+.mine1{
+    position: relative;
+    top:350px;
+    left:400px;
+    color:white;
+    font-size: 25px;
+    z-index:1;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+.minedet1{
+    color:white;
+    position: relative;
+    top:280px;
+    left:250px;
+     
+    font-size: 25px;
+    z-index:1;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+.ic2{
+    fill:deepskyblue;
+}
+.minedet2{
+    color:white;
+    position: relative;
+    top:180px;
+    left:870px;
+     
+    font-size: 25px;
+    z-index:1;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.ic3{
+    fill:chartreuse;
+}
