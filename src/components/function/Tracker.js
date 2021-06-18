@@ -36,11 +36,13 @@ function Tracker() {
     console.log(datas)
   return (
     
-      <div class="contai">
+      <div class="conta">
      
-     <img src="./images/flag.jpg" alt="country" id="flag"></img>
+     
      
     <h1 >Covid-19 Cases In India <span id="country"></span> </h1>
+
+    <img src="./images/india.png" alt="country" id="flag"></img>
   
     <div class="content2">
         <div class="box3">
