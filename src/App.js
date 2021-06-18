@@ -96,7 +96,7 @@ total:"30/36"
       <Route exact path="/about">
         <About/>
         <Exlinks/>
-        <MyDetails/>
+        
       </Route>
 
       <Route exact path="/login">
@@ -123,6 +123,7 @@ total:"30/36"
 
          
       </Switch>
+      <MyDetails/>
       <Socialmediabar/>
       <Footer/>
     </BrowserRouter>
