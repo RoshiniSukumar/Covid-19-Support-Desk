@@ -3,10 +3,12 @@
     background:black;
     padding:20px 0px 50px 0px;
     position: relative;
+    
     top:400px;
     bottom:400px;
     margin-top: 20px;
     margin-bottom:50px;
+    height:250px;
     
   }
   a.social {
@@ -52,7 +54,7 @@
     position:relative;
     left:1000px;
     bottom:30px;
-    font-size: 20px;
+    font-size: 25px;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
   }
@@ -64,10 +66,46 @@
     background-size: auto; */
     position:relative;
     left:220px;
-    top:10px;
+    top:15px;
     
   }
   .gmail1{
     text-decoration: none;
     color:white;
   }
+
+  .det{
+    color:white;
+    margin-bottom: 50px;
+    position: relative;
+    top: 00px;
+}
+.mine{
+    text-align: left;
+    color:coral;
+    font-size: 35px;
+    position:relative;
+    bottom:430px;
+    left:100px;
+    animation-name:ex1;
+    animation-duration:.10s;
+    animation-iteration-count:infinite;
+}
+@keyframes ex1{
+    0% {color:coral;}
+    20% {color:red;}
+    /* 40% {color:black;} */
+    /* 60% {color:indigo;} */
+    /* 80% {color:darkgreen;} */
+    /* 100% {color:darkblue;} */
+ } 
+.minedet{
+    text-align:justify;
+    position: relative;
+    left:400px;
+    font-size: 30px;
+}
+.mail{
+    text-decoration: none;
+    color:black;
+}
