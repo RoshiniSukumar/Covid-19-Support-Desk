@@ -9,6 +9,8 @@ table,td,th{
     
 }
 table{
+    position: relative;
+    top:400px;
     border-collapse:collapse;
     width:100%;
     margin-bottom: 50px;
@@ -22,8 +24,60 @@ th{
 .heading{
     text-align: center;
     font-family:'Times New Roman', Times, serif;
-    color:grey;
+    color:darkslategray;
     font-size: 30px;
     margin-top: 20px;
     margin-bottom:20px;
 }
+
+/*search bar*/
+.search1 {
+    width: 100%;
+    position: relative;
+    top:-300px;
+    left:500px;
+    display: flex;
+  }
+  
+  .searchTerm1 {
+    width: 100%;
+    border: 3px solid #00B4CC;
+    border-right: none;
+    padding: 5px;
+    height: 35px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color:black;
+     
+    background-color:white;
+  }
+  
+  .searchTerm1:focus{
+    color: black;
+  }
+  
+  .searchButton1 {
+    width: 40px;
+    height: 36px;
+    border: 1px solid #00B4CC;
+    background: #00B4CC;
+    text-align: center;
+    color:#fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  /*Resize the wrap to see the search bar change!*/
+  .wrap1{
+    width: 22%;
+    height: 20px;
+    position: absolute;
+    top: 1050px;
+    left: 200px;
+    transform: translate(-50%, -50%);
+    z-index:1;
+  }
+  .search-icon1{
+      fill:white;
+  }
