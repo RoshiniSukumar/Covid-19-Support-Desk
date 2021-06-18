@@ -4,6 +4,7 @@ body {
   height:auto;
   overflow-x: hidden;
   color:white;
+  
   /* background-image: radial-gradient( lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%); */
   background-image: radial-gradient(  #ebc0fd 0%, #d9ded8 100%);
   /* background-image: radial-gradient(  #a8caba 0%, #5d4157 100%); */
