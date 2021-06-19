@@ -19,19 +19,19 @@ export default function Links() {
               </div>
                <div className="full">
               <div className="sidelinks"> 
-       <div className="other1"><a href=" https://ereceipt.tn.gov.in/Cmprf/Cmprf"  >CM Welfare Fund</a></div>
+       <div className="other1"><a href=" https://ereceipt.tn.gov.in/Cmprf/Cmprf" target="_blank"  >CM Welfare Fund</a></div>
          </div>
 
          <div className="sidelinks"> 
-       <div className="other2"><a href=" https://eregister.tnega.org/#/user/pass">To Apply E-Pass</a></div>
+       <div className="other2"><a href=" https://eregister.tnega.org/#/user/pass" target="_blank">To Apply E-Pass</a></div>
          </div>
 
          <div className="sidelinks"> 
-       <div className="other3"><a href="https://stopcorona.tn.gov.in/vaccine_center.php">Vaccine Centres</a></div>
+       <div className="other3"><a href="https://stopcorona.tn.gov.in/vaccine_center.php" target="_blank">Vaccine Centres</a></div>
          </div>
 
          <div className="sidelinks"> 
-       <div className="other4"><a href=" https://stopcorona.tn.gov.in/sample_collection_center.php">Sample Collection Centres</a></div>
+       <div className="other4"><a href=" https://stopcorona.tn.gov.in/sample_collection_center.php" target="_blank">Sample Collection Centres</a></div>
          </div>
          </div>
         </div> 
