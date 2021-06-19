@@ -126,5 +126,10 @@
     color: rgb(194, 160, 8);
 }
 #flag{
-    display: none;
+    /* display: none; */
+    height:70px;
+    width:70px;
+    position: absolute;
+    right:340px;
+    top:140px;
 }
