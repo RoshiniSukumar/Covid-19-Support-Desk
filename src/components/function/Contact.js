@@ -361,21 +361,65 @@ export default function Contact() {
     </tr> )
       const [state, setstate] = useState("")
       console.log(state)
-           
+       
+      const [dis, setdis] = useState([])
      
-      var dis
-    //   var display = dis ==  ? "true" : "false"
-    //   console.log(display)
+       
+      var display = dis 
+    //   ==  ? "true" : "false"
+      console.log(display)
       
       var find = () =>{
         const str = state;
         const str2 = str.charAt(0).toUpperCase() + str.slice(1);
         console.log(str2);
-           dis = a.filter(diss => diss.District == str2)
+        var dist = a.filter(diss => diss.District == str2)
+        setdis(dist)
           console.log(state)
           console.log(dis)
       }
-
+       var card = dis != 0 ?  <div className="containerc">
+       <div className="cardc">
+         
+         <div className="front side">
+           <h1 className="logoc">{dis[0].District}</h1>
+         </div>
+         
+         <div className="back side">
+            
+         <h3 class="namec"><strong>Name_of_the_JDHS:</strong>{dis[0].Name_of_the_JDHS}
+    
+                </h3> 
+                <h3 className="namec">
+            
+         <strong> Official_No: </strong>{dis[0].Official_No} 
+                </h3>
+                <h3 className="namec">
+           
+    
+         <strong> Control_Room: </strong>  {dis[0].Control_Room}
+    
+                </h3>
+                <h3 className="namec">
+           
+       <strong>Name_of_the_coordinator: </strong> {dis[0].Name_of_the_coordinator}
+    
+                </h3>
+                <h3 className="namec">
+           
+            
+          <strong>  Contact_No:</strong>  {dis[0].Contact_No}
+                        </h3>
+           <div></div>      
+           <div className="infoc">
+             <p><span className="property"> </span></p>
+              
+           </div>
+         </div>
+         
+       </div>
+     </div> : null
+     console.log(dis.length)
       
   return (
     <div>
@@ -393,9 +437,10 @@ export default function Contact() {
    </div>
 </div>
         <table>
-         {details}
+         {/* {details} */}
          </table>
           </div> 
+          {card}
     </div>
   )
 }
