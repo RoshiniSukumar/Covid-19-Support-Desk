@@ -56,7 +56,7 @@ const  initialValues={
           }, [])
   
         const onSubmit = async (values) => {
-            values.add = {
+            values.add = await{
               hospitaltype: values.hospitaltype,
               hospitalname: values.hospitalname,
               address:values.address,
@@ -66,8 +66,8 @@ const  initialValues={
               o2bed:values.o2bed,
               total:values.total
             };
-        
-            console.log(values.add)
+            axios.post("http://localhost:2000/details",values.add);
+            // console.log(values.add)
           };
         
           const formik = useFormik({

@@ -50,6 +50,8 @@ function Register(props){
   
   var sign=false
 
+   
+
   const onSubmit = async (values) => {
     //  props.set(true)
       
@@ -71,7 +73,7 @@ function Register(props){
     // }
      signbt() 
 
-    console.log(values.add)
+    // console.log(values.add)
       
   };
   const formik = useFormik({
