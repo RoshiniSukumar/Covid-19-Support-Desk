@@ -2,6 +2,7 @@ import React from 'react'
 import {Formik,useFormik} from "formik";
  
 import './Register.css'
+import axios from 'axios';
 // import { Redirect } from 'react-router-dom';
  
 
@@ -53,13 +54,16 @@ function Register(props){
     //  props.set(true)
       
     
-    values.add = {
+    values.add =await {
+
 
       email: values.email,
       password: values.password,
       confirmpassword:values.confirmpassword
 
     };
+    // console.log(values.add)
+    axios.post("http://localhost:2000/register",values.add);
 
     // if (sign == true)  {
     //   console.log(sign)

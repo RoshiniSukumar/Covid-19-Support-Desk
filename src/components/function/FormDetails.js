@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Formik, useFormik } from "formik";
 import './FormDetails.css'
+import axios from "axios";
 
 const  initialValues={
          
@@ -46,6 +47,13 @@ const  initialValues={
 
      
         function FormDetails(props) {
+          const [Data, setData] = useState({})
+          useEffect(async() => {
+             let beds = await axios.get("http://localhost:2000/details");
+             let datas = beds.data;
+             console.log(datas);
+             
+          }, [])
   
         const onSubmit = async (values) => {
             values.add = {
