@@ -251,7 +251,7 @@ input[type="submit"]{
 }
 .user-signin{
   position: relative;
-    background: #fff;
+    background-color: #fff;
     top:30px;
     left:0;
     width:100%;
@@ -279,7 +279,7 @@ input[type="submit"]{
 }
 .formbx{
   position: relative;
-  bottom:178px;
+  bottom:78px;
   width:610px;
   height:600px;
   background:white;
@@ -347,6 +347,7 @@ input[type="submit"]{
   /* text-transform: uppercase; */
   font-weight: 500;
   background-color: #fff;
+  padding-bottom: 200px;
 }
 .signup a{
   font-weight: 600;

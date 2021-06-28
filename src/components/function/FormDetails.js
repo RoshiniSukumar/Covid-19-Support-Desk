@@ -259,7 +259,7 @@ return (
        {" "}
       <br/><br/><br/>
 
-      <button  type="submit" className='loginbtn2' onClick={formik.handleSubmit}  >
+      <button  type="submit"   className='loginbtn2' onClick={formik.handleSubmit}  >
         {" "}
         Submit{" "}
       </button>{" "} 
