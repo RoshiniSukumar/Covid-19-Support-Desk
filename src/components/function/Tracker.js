@@ -15,7 +15,7 @@ function Tracker() {
     var recovered=""
     var tests=""
     useEffect(async() => {
-          var datass=await axios.get("https://corona.lmao.ninja/v2/countries/India")
+          var datass= await axios.get("https://corona.lmao.ninja/v2/countries/India")
           setdatas(datass)
          
         //  console.log(active)

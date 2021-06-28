@@ -51,29 +51,36 @@
     right:350px;
   }
   .myinfo{
-    position:relative;
-    left:1000px;
-    bottom:30px;
+    /* position:relative; */
+    /* left:1000px; */
+    /* bottom:30px; */
     font-size: 25px;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
+    display:block;
   }
   .gmail{
     fill:crimson;
+    display:block;
+
     /* border-color: crimson; */
     /* fill:white; */
     /* background-color: white  ;
     background-size: auto; */
     position:relative;
-    left:220px;
-    top:35px;
+    top: 20px;
+    /* left:220px; */
+    /* top:35px; */
     
   }
   .gmail1{
     text-decoration: none;
     color:white;
     position:relative;
+    left:900px;
     top:-25px;
+     display:flex;
+     flex-direction:row;
   }
 
   .det{

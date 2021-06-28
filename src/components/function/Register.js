@@ -93,7 +93,7 @@ function Register(props){
       <div className="user-signin1">
         
    <form  className="formbx1" onSubmit={formik.handleSubmit}>
-     <body  >
+     
      <div className="formin1">
      <h3 className="formhead1">Create an Account</h3>
 
@@ -173,7 +173,7 @@ function Register(props){
      </button>{" "}
      <p className="signup1">Already have an account? <a href="/login">Sign-In</a></p>
      </div>
-   </body>
+    
    </form>
    <div className="imgbx1"><img className="img5" src="./images/img5.jpg"></img></div>
    
