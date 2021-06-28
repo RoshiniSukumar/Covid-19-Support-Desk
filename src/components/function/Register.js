@@ -66,7 +66,7 @@ function Register(props){
     };
     // console.log(values.add)
     axios.post("http://localhost:2000/register",values.add);
-
+    alert('New Account Created Successfully!')
     // if (sign == true)  {
     //   console.log(sign)
     //   return <Redirect to={"/register/details"}/>

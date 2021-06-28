@@ -71,6 +71,7 @@ const  initialValues={
 
             
             axios.post("http://localhost:2000/details",values.add);
+            alert('Details submitted successfully');
             console.log(values.add)
           };
         
