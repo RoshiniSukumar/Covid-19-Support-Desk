@@ -2,7 +2,9 @@ import React,{ useEffect, useState } from "react";
 import { Formik, useFormik } from "formik";
 import './FormDetails.css'
 import axios from "axios";
-
+import Cookies from 'universal-cookie';
+ 
+const cookies = new Cookies();
 
 const  initialValues={
          
@@ -50,13 +52,22 @@ const  initialValues={
 
      
         function FormDetails(props) {
-          const [Data, setData] = useState({})
+          console.log("hospitalname",props.hospitalname)
+          const [Data, setData] = useState([])
           useEffect(async() => {
              let beds = await axios.get("http://localhost:2000/details");
              let datas = beds.data;
-             console.log(datas);
+             console.log("datas",datas);
+             setData(datas)
              
+              //  var cooks = datas.
           }, [])
+          var cook = cookies.get('Hppname');
+          if(Data!==null){
+            console.log("data in cook",cook)
+            var rose = Data.filter((data)=> data.hospitalname==cook)
+            console.log("rose",rose)
+          }
         const onSubmit = async (values) => {
             values.add = {
               hospitaltype: values.hospitaltype,

@@ -26,10 +26,7 @@ const validate = (values) => {
   //   //   error.confirmpassword = "* RequiredField";
     
   // }
-  if(values.password && values.confirmpassword){
-    if(values.password !== values.confirmpassword)
-    error.confirmpassword = "* Passwords must match!"
-  }
+   
   return error;
 };
 
@@ -142,15 +139,15 @@ function Register(props){
      <br></br>
 
      <label className="lb1"  forhtml="confirmpassword" >
-           Confirm Password:
+            Hospital Name
          </label>{" "}
        {" "}
        <br/>
        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
        <input
-         type="password"
+         type="text"
          name="confirmpassword"
-         placeholder="Confirm Password"
+         placeholder="hospitalname"
          className="ip1"
          onChange={formik.handleChange}
          value={formik.values.confirmpassword}

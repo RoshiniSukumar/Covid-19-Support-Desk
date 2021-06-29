@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Formik, useFormik } from "formik";
-
-
+import axios from "axios";
+import Cookies from 'universal-cookie';
+ 
 import './Login.css'
  
+
+const cookies = new Cookies();
 
 const initialValues = {
   email: "",      
@@ -23,18 +26,33 @@ const validate = (values) => {
 };
 
 function Login(props) {
-   
+  const [login, setlogin] = useState("")
+  const [hpname,sethpname] = useState("") 
   var sign=false
   
   const onSubmit = async (values) => {
+
+
     values.add = {
       email: values.email,
       password: values.password,
     };
-      
+  var signin = await axios.post("http://localhost:2000/login",values.add)
+  let sign = signin.data.err
+  console.log(sign)
+  
+  if(sign==null){
+    console.log("Login successfully!")
+    
+    cookies.set('Hppname',"arun" );
+    // sethpname(Login.data.hospitalname)
+    // console.log(hpname)
     signbt() 
     alert('Login Successfully!')
     console.log(values.add)
+  }
+    
+    console.log(signin)
   };
   const formik = useFormik({
     initialValues,
