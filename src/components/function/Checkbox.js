@@ -1,13 +1,32 @@
 import React, { useState} from 'react';
 import  './Checkbox.css';
  
-const Checkbox = () =>{
+const Checkbox = (props) =>{
+  
+  const [privatee,setprivatee] = useState(false)
+  const [govt,setgovt] = useState(false)
+  const [chc,setchc] = useState(false)
+  const [ccc,setccc] = useState(false)
+  const [cho,setcho] = useState(false)
+  const [iccc,seticcc] = useState(false)
   const [isChecked,setIsChecked] = useState(new Map());
   const handleChange = (event) =>{
     setIsChecked(isChecked => isChecked.set(event.target.name,event.target.checked));
-    console.log(isChecked);
+    console.log("is checked",isChecked);
    
   }
+ 
+
+  const handler = (e) => {
+     e.preventDefault()
+    props.p(privatee);
+    props.g(govt);
+    props.c(ccc);
+    props.o(cho);
+    props.h(chc);
+    props.i(iccc);
+  };
+
   return (
    <form className="chkbx">
       <h4 className="text">Coimbatore COVID Beds Availability Status</h4>
@@ -15,35 +34,36 @@ const Checkbox = () =>{
         
        <label className="container">Government
       <input type="checkbox" 
-      onChange={(e)=>{setIsChecked(e.target.checked)}}></input>
+      onChange={(e)=>{setgovt(e.target.checked)}}></input>
       <span className="mark"></span></label>
 
-      <label className="container">Private
+      <label className="container">Private 
       <input type="checkbox"    
       value="Private"
-      onChange={(e)=>{setIsChecked(e.target.checked)}}></input>
+      onChange={(e)=>{setprivatee(e.target.checked)}}></input>
       <span className="mark"></span></label>
 
       <label className="container">COVID Hospitals(CHO - For Severe Cases)
       <input type="checkbox"   
-      onChange={(e)=>{setIsChecked(e.target.checked)}}></input>
+      onChange={(e)=>{setcho(e.target.checked)}}></input>
       <span className="mark"></span></label>
 
       <label className="container">COVID Health Centres(CHC - For Moderate Cases)
       <input type="checkbox"    
-      onChange={(e)=>{setIsChecked(e.target.checked)}}></input>
+      onChange={(e)=>{setchc(e.target.checked)}}></input>
       <span className="mark"></span></label>
 
       <label className="container">COVID Care Centres(CCC - For Mild Cases)
       <input type="checkbox"   
-      onChange={(e)=>{setIsChecked(e.target.checked)}}></input>
+      onChange={(e)=>{setccc(e.target.checked)}}></input>
       <span className="mark"></span></label>
 
       <label className="container">Interim COVID Care Centres(ICCC - For Mild Cases)
       <input type="checkbox"    
-      onChange={(e)=>{setIsChecked(e.target.checked)}}></input>
+      onChange={(e)=>{seticcc(e.target.checked)}}></input>
       <span className="mark"></span></label>
-      
+       
+      <button onClick={handler}>submit</button>
    </form>
       
     

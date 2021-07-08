@@ -44,7 +44,7 @@ function Login(props) {
   if(sign==null){
     console.log("Login successfully!")
     
-    cookies.set('Hppname',"arun" );
+    cookies.set('Hppname',signin.data.hospitalname);
     // sethpname(Login.data.hospitalname)
     // console.log(hpname)
     signbt() 

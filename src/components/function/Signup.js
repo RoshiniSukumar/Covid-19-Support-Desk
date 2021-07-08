@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Register from './Register'
-import  FormDetails from './FormDetails'
+import  Regdetails from './Regdetails'
  
 
 function Signup() {
@@ -10,7 +10,7 @@ function Signup() {
     function signevent(newvalue){
         setsignup(newvalue)
     }
-    var signuppg = signup ?   <FormDetails   />  : <Register set={signevent}/> 
+    var signuppg = signup ?   <Regdetails   />  : <Register set={signevent}/> 
   return (
     <div>
       

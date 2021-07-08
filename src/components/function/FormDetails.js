@@ -5,75 +5,100 @@ import axios from "axios";
 import Cookies from 'universal-cookie';
  
 const cookies = new Cookies();
-
-const  initialValues={
-         
-        hospitaltype:"",
-        hospitalname:"",
-        address:"",
-        contactnumber:"",
-        normalbed:"",
-        icubed:"",
-        o2bed:"",
-        total:""
-    };
-
-    const validate = (values) => {
-      let error = {};
-     
-      if (!values.hospitaltype) {
-        error.hospitaltype = "* Required Field";
-      }
-      if (!values.hospitalname ) {
-        error.hospitalname  = "* Required Field";
-      }
-      if (!values.address ) {
-        error.address  = "* Required Field";
-      }
-      if (!values.contactnumber) {
-        error.contactnumber  = "* Required Field";
-      }
-      if (!values.normalbed ) {
-        error.normalbed  = "* Required Field";
-      }
-      if (!values.icubed ) {
-        error.icubed = "* Required Field";
-      }
-      if (!values.o2bed ) {
-        error.o2bed = "* Required Field";
-      }
-      if (!values. total) {
-        error.total = "* Required Field";
-      }
-      return error;
-    };
-
-   
-
-     
+        var samp = ""
         function FormDetails(props) {
-          console.log("hospitalname",props.hospitalname)
+          const [formd, setformd] = useState("")
+          const [formt,setformt] = useState("")
+          const [formp,setformp] = useState("")
+          const [forma,setforma] = useState("")
+          // console.log("hospitalname",props.hospitalname)
           const [Data, setData] = useState([])
           useEffect(async() => {
              let beds = await axios.get("http://localhost:2000/details");
              let datas = beds.data;
              console.log("datas",datas);
              setData(datas)
-             
+
+             var cook = cookies.get('Hppname');
+
+             var rose = datas.filter((data)=> data.hospitalname==cook)
+             if(rose.length!==0){
+               console.log("hgsaxj")
+               console.log(rose[0])
+             setformd(rose[0].hospitalname)
+             setformt(rose[0].hospitaltype)
+             setformp(rose[0].contactnumber)
+             setforma(rose[0].address)
+             }
               //  var cooks = datas.
           }, [])
-          var cook = cookies.get('Hppname');
-          if(Data!==null){
-            console.log("data in cook",cook)
-            var rose = Data.filter((data)=> data.hospitalname==cook)
-            console.log("rose",rose)
+          console.log("formd",formd)
+
+          // if(Data!==null){
+          //   console.log("data in cook",cook)
+          //   console.log("Data",Data)
+          //   // var rose = Data.filter((data)=> data.hospitalname==cook)
+
+          //   console.log("rose",rose)
+          //   // var det = 
+          //   if(rose[0]!==undefined){
+          //     console.log("if")
+          //     // setformd(rose[0].hospitalname)
+          //     samp=rose[0].hospitalname
+          //     console.log("hagg",samp)
+
+          //   }
+          // }
+          const  initialValues={
+         
+            hospitaltype:formt,
+            hospitalname:formd,
+            address:forma,
+            contactnumber:formp,
+            normalbed:"",
+            icubed:"",
+            o2bed:"",
+            total:""
+        };
+
+        const validate = (values) => {
+          let error = {};
+         
+          if (!values.hospitaltype) {
+            error.hospitaltype = "* Required Field";
           }
+          if (!values.hospitalname ) {
+            error.hospitalname  = "* Required Field";
+          }
+          if (!values.address ) {
+            error.address  = "* Required Field";
+          }
+          if (!values.contactnumber) {
+            error.contactnumber  = "* Required Field";
+          }
+          if (!values.normalbed ) {
+            error.normalbed  = "* Required Field";
+          }
+          if (!values.icubed ) {
+            error.icubed = "* Required Field";
+          }
+          if (!values.o2bed ) {
+            error.o2bed = "* Required Field";
+          }
+          if (!values. total) {
+            error.total = "* Required Field";
+          }
+          return error;
+        };
+    
+       
         const onSubmit = async (values) => {
+          console.log("in submit")
             values.add = {
-              hospitaltype: values.hospitaltype,
-              hospitalname: values.hospitalname,
-              address:values.address,
-              contactnumber:values.contactnumber,
+              hospitaltype: formt,
+              hospitalname:  formd,
+              address: forma,
+              contactnumber: formp,
               normalbed:values.normalbed,
               icubed:values.icubed,
               o2bed:values.o2bed,
@@ -81,17 +106,33 @@ const  initialValues={
             };
 
             
-            axios.post("http://localhost:2000/details",values.add);
+            await axios.put("http://localhost:2000/details",values.add);
             alert('Details submitted successfully');
-            console.log(values.add)
+            console.log("tsauka",values.add)
           };
         
-          const formik = useFormik({
-            initialValues,
-            onSubmit,
-            validate
-          });
+          
 
+        const formik = useFormik({
+          initialValues,
+          onSubmit
+          // validate
+        });
+          
+          
+        //   const  initialValues={
+         
+        //     hospitaltype:rose[0].hospitaltype,
+        //     hospitalname:rose[0].hospitalname,
+        //     address:rose[0].address,
+        //     contactnumber:rose[0].contactnumber,
+        //     normalbed:rose[0].normalbed,
+        //     icubed:rose[0].icubed,
+        //     o2bed:rose[0].o2bed,
+        //     total:rose[0].total
+        // };
+      
+       
 return (
    <div className="cont2">
      <div className="user-signin2">
@@ -105,15 +146,13 @@ return (
         <input
           type= "text"
           name= "hospitaltype"
-          placeholder="Enter Hospital type as CCC/CHO/CHC/ICCC"
+          placeholder={formt}
           className="ip2"
-          onChange={formik.handleChange}
-          value={formik.values.hospitaltype}
+          // onChange= {}
+          value={formt}
           onBlur={formik.handleBlur}
         />{" "}
-        {formik.touched.hospitaltype && formik.errors.hospitaltype ? (
-          <div  className='required2'>&emsp;&emsp;&emsp;&emsp;&emsp; {formik.errors.hospitaltype} </div>
-        ) : null}{" "}
+        
               {" "}
       <br/><br/><br/>
 
@@ -126,15 +165,13 @@ return (
         <input
           type="text"
           name= "hospitalname" 
-          placeholder=" Enter Hospital Name"
+          placeholder={formd}
           className="ip2"
-          onChange={formik.handleChange}
-          value={formik.values.hospitalname}
+          // onChange={formik.handleChange}
+          value={formd}
           onBlur={formik.handleBlur}
         />{" "}
-        {formik.touched. hospitalname  && formik.errors.hospitalname ? (
-          <div  className='required2'>&emsp; &emsp;&emsp;&emsp;&emsp;{formik.errors.hospitalname } </div>
-        ) : null}{" "}
+         {" "}
         
        {" "}
       <br/><br/><br/>
@@ -148,15 +185,13 @@ return (
         <input
           type="text"
           name=  "address" 
-          placeholder=" Enter Hospital Address"
+          placeholder={forma}
           className="ip2"
-          onChange={formik.handleChange}
-          value={formik.values.address }
+          // onChange={formik.handleChange}
+          value={forma}
           onBlur={formik.handleBlur}
         />{" "}
-        {formik.touched.address  && formik.errors.address ? (
-          <div  className='required2'>&emsp; &emsp;&emsp;&emsp;&emsp;{formik.errors.address } </div>
-        ) : null}{" "}
+        {" "}
         
        {" "}
       <br/><br/><br/>
@@ -170,15 +205,13 @@ return (
         <input
           type="telephone number"
           name=   "contactnumber"
-          placeholder=" Enter Hospital Contact Number"
+          placeholder={formp}
           className="ip2"
-          onChange={formik.handleChange}
-          value={formik.values.contactnumber}
+          // onChange={formik.handleChange}
+          value={formp}
           onBlur={formik.handleBlur}
         />{" "}
-        {formik.touched.contactnumber  && formik.errors.contactnumber? (
-          <div  className='required2'>&emsp; &emsp;&emsp;&emsp;&emsp;{formik.errors.contactnumber } </div>
-        ) : null}{" "}
+         {" "}
         
        {" "}
       <br/><br/><br/>
