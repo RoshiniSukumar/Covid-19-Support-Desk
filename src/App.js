@@ -45,7 +45,9 @@ const [detailss, setdetailss] = useState([])
    
   var category = []
 
-
+     if (ccc!==true && chc!==true && iccc!==true && cho!==true){
+       category = detailss
+     }
 
  
 

@@ -14,7 +14,7 @@ const Cards = (props)  => {
           { hospitalname}</div></h2>
          <div className="address">Address:<br/>&emsp;{address} <br/>
           Ph No:{contactnumber}</div><br/>
-         <div classname="beds">
+         <div className="bed">
           <h4>&emsp;&emsp;&emsp; Vacancy/Total</h4>
          Normal:&emsp;{normalbed} <br/>
          ICU:&emsp;&emsp;&emsp;{icubed} <br/>
