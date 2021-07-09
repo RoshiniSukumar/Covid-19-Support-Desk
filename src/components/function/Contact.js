@@ -436,12 +436,73 @@ export default function Contact() {
      </button>
    </div>
 </div>
+
         <table>
          {/* {details} */}
          </table>
           </div> 
           {card}
+          <div className="nos"> 
     </div>
+
+    
+     <table className="tle">
+     <tr className="rowh" >
+         <th>S.no</th>
+         <th>District</th>
+         <th>Name of the JDHS</th>
+         <th>Official No.</th>
+         <th>Control Room</th>
+         <th>Name of the coordinator</th>
+         <th>Contact No.</th>
+     </tr>
+     <tr className="row1 ">
+         <td>1.</td>
+         <td>Ariyalur</td>
+         <td>Dr.S.Selvaraj</td>
+         <td>9444982674</td>
+         <td>04329-228709</td>
+         <td>Dr.Manikandan</td>
+         <td>9943848250</td>
+     </tr>
+     <tr className="row2">
+         <td>2.</td>
+         <td>Chengalpattu</td>
+         <td>Dr.E.Jeeva</td>
+         <td>9444982667</td>
+         <td>044-27427412</td>
+         <td>Dr.Dhandapani</td>
+         <td>9940013418</td>
+     </tr>
+     <tr className="row3">
+         <td>3.</td>
+         <td>Coimbatore</td>
+         <td>Dr.P.Krishna</td>
+         <td>9498027043</td>
+         <td>0422-2306051 ,0422-2306052 ,0422-2306053</td>
+         <td>Dr.M.Venkatesh</td>
+         <td>9442348668</td>
+     </tr>
+     <tr className="row4">
+         <td>4.</td>
+         <td>Cuddalore</td>
+         <td>Dr.P.N.Ramesh Babu</td>
+         <td>9444982662</td>
+         <td>04142-220700</td>
+         <td>Dr.A.N.Parimelazhagan</td>
+         <td>9444305528</td>
+     </tr>
+     <tr className="row5">
+         <td>5.</td>
+         <td>Dharmapuri</td>
+         <td>Dr.K.Thilagam</td>
+         <td>9444982663</td>
+         <td>04342-231500</td>
+         <td>Dr.S.Rajkumar</td>
+         <td>9865533866</td>
+     </tr></table>
+     <p className="hint">***For more district contact numbers kindly search on searchbar.**</p>
+     </div>
   )
 }
 

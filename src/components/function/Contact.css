@@ -70,10 +70,10 @@ th{
   
   /*Resize the wrap to see the search bar change!*/
   .wrap1{
-    width: 22%;
+    width: 500px;
     height: 20px;
     position: absolute;
-    top: 1050px;
+    top: 1070px;
     left: 200px;
     transform: translate(-50%, -50%);
     z-index:1;
@@ -185,4 +185,49 @@ p {
 @media (max-width:700px) {
   .cardc { transform: scale(.5); }
   .containerc:hover .cardc { transform: scale(.5) rotateY(-180deg) translateZ(1px); }
+}
+.nos{
+  position:relative;
+  top:500px;
+
+}
+  .tle{
+    padding:20px;
+  }
+.row5{
+  margin:10px;
+  padding:20px;
+  color:#3b3b3b;
+   
+  font-size: 15px;
+}
+.row1{
+  padding:20px;
+  color:brown;
+   
+  font-size: 15px;
+}
+.row2{
+  padding:20px;
+  color:darkblue;
+  
+  font-size: 15px;
+}
+.row3{
+  padding:20px;
+  color:darkmagenta;
+  
+  font-size: 15px;
+}
+.row4{
+  padding:20px;
+  color:orangered;
+  
+  font-size: 15px;
+}
+.hint{
+  color:red;
+  position:relative;
+  left:450px;
+  z-index:-1;
 }
