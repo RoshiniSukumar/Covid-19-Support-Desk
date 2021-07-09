@@ -16,7 +16,7 @@
 .box{
     width:500px;
     height:300px;
-    background-image: url("15000.jpg");
+    background-image: url("24.jpg");
     background-size: cover;
     box-shadow:rgb(92, 87, 87);
     position: relative;
@@ -25,13 +25,13 @@
 }
 .box .hname{
     position: absolute;
-    top:0px;
+    top:0;
     left:0;
     width:500px;
     height:300px;
     /* background-image: radial-gradient(  #dbdcd7 0%, #dddcd7 24%, #e2c9cc 30%, #e7627d 46%, #b8235a 59%, #801357 71%, #3d1635 84%, #1c1a27 100%); */
-    background-image: url("412.jpg");
-    background-size:auto;
+    background-image: url("170.jpg");
+    background-size:cover;
     transition: all 2s;
     white-space: nowrap;
     text-align: center;
@@ -51,6 +51,8 @@
 .box .address{
     margin:40px 70px 80px 10px;
     transform: translateY(200px);
+    position:relative;
+    left:100px;
     
 transition: all 1.1s;
     color:darkblue;

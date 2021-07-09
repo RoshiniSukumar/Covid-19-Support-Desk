@@ -36,8 +36,8 @@ const [detailss, setdetailss] = useState([])
   }, [])
  
 
-  const [privatee,setprivatee] = useState(false)
-  const [govt, setgovt] = useState(false)
+  // const [privatee,setprivatee] = useState(false)
+  // const [govt, setgovt] = useState(false)
   const [chc, setchc] = useState(false)
   const [ccc, setccc] = useState(false)
   const [cho, setcho] = useState(false)
@@ -99,7 +99,7 @@ const [detailss, setdetailss] = useState([])
       <Switch>
         <Route exact path="/">
          <Links/>
-          <Checkbox p={setprivatee}  g={setgovt} c={setccc} o={setcho} h={setchc} i={seticcc}/>
+          <Checkbox c={setccc} o={setcho} h={setchc} i={seticcc}/>
           <Searchbar set ={setbar}/>
            
            <Home/> 

@@ -3,8 +3,8 @@ import  './Checkbox.css';
  
 const Checkbox = (props) =>{
   
-  const [privatee,setprivatee] = useState(false)
-  const [govt,setgovt] = useState(false)
+  // const [privatee,setprivatee] = useState(false)
+  // const [govt,setgovt] = useState(false)
   const [chc,setchc] = useState(false)
   const [ccc,setccc] = useState(false)
   const [cho,setcho] = useState(false)
@@ -19,12 +19,13 @@ const Checkbox = (props) =>{
 
   const handler = (e) => {
      e.preventDefault()
-    props.p(privatee);
-    props.g(govt);
+    // props.p(privatee);
+    // props.g(govt);
     props.c(ccc);
     props.o(cho);
     props.h(chc);
     props.i(iccc);
+    alert("Category selected successfully!!")
   };
 
   return (
@@ -32,7 +33,7 @@ const Checkbox = (props) =>{
       <h4 className="text">Coimbatore COVID Beds Availability Status</h4>
        
         
-       <label className="container">Government
+       {/* <label className="container">Government
       <input type="checkbox" 
       onChange={(e)=>{setgovt(e.target.checked)}}></input>
       <span className="mark"></span></label>
@@ -41,7 +42,7 @@ const Checkbox = (props) =>{
       <input type="checkbox"    
       value="Private"
       onChange={(e)=>{setprivatee(e.target.checked)}}></input>
-      <span className="mark"></span></label>
+      <span className="mark"></span></label> */}
 
       <label className="container">COVID Hospitals(CHO - For Severe Cases)
       <input type="checkbox"   
@@ -63,7 +64,7 @@ const Checkbox = (props) =>{
       onChange={(e)=>{seticcc(e.target.checked)}}></input>
       <span className="mark"></span></label>
        
-      <button onClick={handler}>submit</button>
+      <button className="sub" onClick={handler}>Submit</button>
    </form>
       
     
