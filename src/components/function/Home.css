@@ -120,7 +120,7 @@ img{
     width:100%;
     height:520px;
     position: relative;
-    bottom:1200px;
+    bottom:1165px;
     
 }
 .gifs{
@@ -140,7 +140,7 @@ img{
     max-height: 15px;
     max-width:15px;
     position: absolute;
-    bottom:420px;
+    bottom:400px;
     left:150px;
     object-fit: contain;
     margin:100px;
@@ -155,5 +155,5 @@ img{
     width:170px;
     z-index:1;
     position:relative;
-    bottom:1700px;
+    bottom:1685px;
 }

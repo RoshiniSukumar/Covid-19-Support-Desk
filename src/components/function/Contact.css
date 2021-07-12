@@ -1,7 +1,11 @@
 .contact-image{
-    width:70%;
+    width:40%;
+    height:400px;
     margin:40px;
     margin-left: 200px;
+    position: relative;
+    top:50px;
+    left:-150px;
 }
 table,td,th{
     border:1px solid black ;
@@ -10,11 +14,11 @@ table,td,th{
 }
 table{
     position: relative;
-    top:400px;
+    /* top:400px; */
     border-collapse:collapse;
     width:100%;
     margin-bottom: 50px;
-   color:black; 
+   color:black;
 
 }
 th{
@@ -22,7 +26,9 @@ th{
 }
 /*heading*/
 .heading{
-    text-align: center;
+     position:relative;
+     left:610px;
+     bottom:450px;
     font-family:'Times New Roman', Times, serif;
     color:darkslategray;
     font-size: 30px;
@@ -34,8 +40,8 @@ th{
 .search1 {
     width: 100%;
     position: relative;
-    top:-300px;
-    left:500px;
+    top:-850px;
+    left:750px;
     display: flex;
   }
   
@@ -99,8 +105,8 @@ th{
   
   /* Center it */
   position: absolute;
-  top:1000px;
-  left: 50%;
+  top:450px;
+  left: 950px;
   transform: translate(-50%, -50%);
    
 }
@@ -228,6 +234,18 @@ p {
 .hint{
   color:red;
   position:relative;
-  left:450px;
+  left:750px;
+  bottom:650px;
   z-index:-1;
+}
+
+table,td,th{
+  position:relative;
+  border:3px solid darkslategray;
+  text-align: center;
+  align-content:center;
+  font-size: 15px;
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }

@@ -52,28 +52,28 @@ const [detailss, setdetailss] = useState([])
  
 
   if(ccc==true){
-    let cc=detailss.filter((det)=> det.hospitaltype=="ccc")
+    let cc=detailss.filter((det)=> det.hospitaltype=="CCC")
      category=category.concat(cc)
      console.log("category",category)
      console.log("Im in ccc",ccc)
      console.log("cc",category)
   }
   if(cho==true){
-    let gj=detailss.filter((det)=> det.hospitaltype=="cho")
+    let gj=detailss.filter((det)=> det.hospitaltype=="CHO")
     category=category.concat(gj)
     console.log("category",category)
     console.log("im in cho",cho)
     console.log("gj",category)
   }
   if(chc==true){
-    let pr=detailss.filter((det)=> det.hospitaltype=="chc")
+    let pr=detailss.filter((det)=> det.hospitaltype=="CHC")
     category=category.concat(pr)
     // category.concat(pr)
     console.log("im in chc",chc)
     console.log("pr",category)
   }
   if(iccc==true){
-    let nj=detailss.filter((det)=> det.hospitaltype=="iccc")
+    let nj=detailss.filter((det)=> det.hospitaltype=="ICCC")
     var category = category.concat(nj)
     console.log("category",category)
     console.log("im in iccc",iccc)
@@ -105,6 +105,7 @@ const [detailss, setdetailss] = useState([])
            <Home/> 
            
           <BedDetails details={category}/>
+          <Footer/>
       </Route>
       
       <Route exact path="/tracker">
@@ -140,15 +141,16 @@ const [detailss, setdetailss] = useState([])
         
         <Route exact path="/register/details" > 
         <FormDetails/>
+        
         </Route>
         
         
-
+        
          
       </Switch>
       <MyDetails/>
       <Socialmediabar/>
-      <Footer/>
+      
     </BrowserRouter>
     
   )

@@ -93,6 +93,11 @@ const cookies = new Cookies();
     
        
         const onSubmit = async (values) => {
+          var currentdate=new Date()
+          var datetime = "Last Updated: " + currentdate.getDay() + "/" + currentdate.getMonth() 
++ "/" + currentdate.getFullYear() + " @ " 
++ currentdate.getHours() + ":" 
++ currentdate.getMinutes() + ":" + currentdate.getSeconds();
           console.log("in submit")
             values.add = {
               hospitaltype: formt,
@@ -102,7 +107,8 @@ const cookies = new Cookies();
               normalbed:values.normalbed,
               icubed:values.icubed,
               o2bed:values.o2bed,
-              total:values.total
+              total:values.total,
+              date:datetime
             };
 
             

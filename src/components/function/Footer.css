@@ -51,24 +51,24 @@ animation:scroll-left 30s linear infinite;
 }*/
 
 .scroll-left{
-    position:fixed;
-    bottom:0%;
+    position:absolute;
+    bottom:80%;
     overflow:hidden;
-    background-color:peachpuff;
+    background-color:aquamarine;
     font-family:'Courier New', Courier, monospace;
-    color:darkred;
+    color:black;
     font-weight: 600;
     text-decoration:wavy;
     white-space:nowrap;
     display:flexbox;
     width:100%;
     height:40px;
-    padding-top: 10px;
+    padding-top: 0px;
     
 
 }
 .scroll-left p{
-    position:fixed;
+    position:absolute;
     animation:anim 40s linear infinite;
 }
 @keyframes anim{
