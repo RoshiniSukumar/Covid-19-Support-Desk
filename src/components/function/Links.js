@@ -14,8 +14,8 @@ export default function Links() {
             </ol>
             </div> */}
             <div className="video">
-
             <iframe width="660" height="415" src="https://www.youtube.com/embed/CmaA00M4kNI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ></iframe>
+            {/* <iframe width="660" height="415" src="https://www.youtube.com/embed/CmaA00M4kNI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ></iframe> */}
               </div>
                <div className="full">
               <div className="sidelinks"> 

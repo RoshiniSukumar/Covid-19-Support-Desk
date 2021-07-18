@@ -52,7 +52,7 @@ animation:scroll-left 30s linear infinite;
 
 .scroll-left{
     position:absolute;
-    bottom:80%;
+    bottom:79%;
     overflow:hidden;
     background-color:aquamarine;
     font-family:'Courier New', Courier, monospace;
